@@ -10,8 +10,9 @@ export const metadata: Metadata = {
     "Tailored Excel training from basics to Power Query and VBA — Microsoft Excel Expert, Cook Islands.",
 };
 
+/** Same square box for each tool so artwork renders at equal visual size. */
 const toolIconClass =
-  "h-12 w-auto max-h-16 object-contain object-bottom sm:h-14 sm:max-h-[4.5rem]";
+  "h-12 w-12 shrink-0 object-contain object-center sm:h-14 sm:w-14";
 
 export default function ExcelTrainingPage() {
   const excelGallery = excelImages;
@@ -28,7 +29,7 @@ export default function ExcelTrainingPage() {
             height={120}
             className={toolIconClass}
             priority
-            unoptimized
+            sizes="(min-width: 640px) 3.5rem, 3rem"
           />
           <Image
             src="/icons/power-pivot.png"
@@ -37,7 +38,7 @@ export default function ExcelTrainingPage() {
             height={120}
             className={toolIconClass}
             priority
-            unoptimized
+            sizes="(min-width: 640px) 3.5rem, 3rem"
           />
           <Image
             src="/icons/power-query.png"
@@ -46,7 +47,7 @@ export default function ExcelTrainingPage() {
             height={120}
             className={toolIconClass}
             priority
-            unoptimized
+            sizes="(min-width: 640px) 3.5rem, 3rem"
           />
         </>
       }
