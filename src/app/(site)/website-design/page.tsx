@@ -66,7 +66,7 @@ export default function WebsiteDesignPage() {
 
       <h2>Example: e-commerce shop layout</h2>
       <p>
-        Below is a screenshot from another site we built—an E-Commerce shop experience with product grid, filters, cart, and
+        Below is a screenshot from another site we built: an E-Commerce shop experience with product grid, filters, cart, and
         navigation. It illustrates the kind of clean, product-led layout we can
         deliver when you want customers to browse, compare, and purchase
         online.
