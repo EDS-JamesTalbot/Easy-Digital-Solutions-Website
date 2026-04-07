@@ -64,10 +64,10 @@ export function ServicePageShell({
         ) : null}
         {titleAside ? (
           <div
-            className={`flex flex-wrap items-end justify-between gap-x-6 gap-y-4${eyebrow ? " mt-2" : ""}`}
+            className={`flex flex-wrap items-center justify-between gap-x-6 gap-y-4${eyebrow ? " mt-2" : ""}`}
           >
             <h1 className={`${titleClassName} min-w-0 flex-1`}>{title}</h1>
-            <div className="flex shrink-0 items-center gap-3 sm:gap-4">
+            <div className="flex shrink-0 items-center justify-end gap-3 sm:gap-4">
               {titleAside}
             </div>
           </div>

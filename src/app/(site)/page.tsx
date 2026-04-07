@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { WaveDivider } from "@/components/WaveDivider";
 import {
-  ServiceTileGraphic,
+  ServiceTileBackground,
   type ServiceTileGraphicId,
 } from "@/components/ServiceTileGraphic";
 import { edsPrimaryButtonClass } from "@/lib/eds-button";
@@ -234,41 +234,39 @@ export default function Home() {
             {serviceCards.map((s) => (
               <article
                 key={s.title}
-                className={`flex flex-col rounded-2xl border border-eds-charcoal/10 bg-white p-6 shadow-sm ring-1 ${accentRing(s.accent)} transition hover:-translate-y-0.5 hover:shadow-md`}
+                className={`relative isolate flex flex-col overflow-hidden rounded-2xl border border-eds-charcoal/10 bg-white p-6 shadow-sm ring-1 ${accentRing(s.accent)} transition hover:-translate-y-0.5 hover:shadow-md`}
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2">
-                      <span
-                        className={`h-2.5 w-2.5 shrink-0 rounded-full ${accentDot(s.accent)}`}
-                        aria-hidden
-                      />
-                      <h3 className="font-display text-lg font-bold capitalize text-eds-charcoal">
-                        {s.title}
-                      </h3>
-                    </div>
+                <ServiceTileBackground id={s.graphicId} accent={s.accent} />
+                <div className="relative z-10 flex flex-col [&_h3,&_p,&_ul]:[text-shadow:0_0_14px_rgba(255,255,255,0.9)]">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className={`h-2.5 w-2.5 shrink-0 rounded-full ${accentDot(s.accent)}`}
+                      aria-hidden
+                    />
+                    <h3 className="font-display text-lg font-bold capitalize text-eds-charcoal">
+                      {s.title}
+                    </h3>
                   </div>
-                  <ServiceTileGraphic id={s.graphicId} accent={s.accent} />
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-eds-muted">
+                    {s.blurb}
+                  </p>
+                  <ul className="mt-5 space-y-2 border-t border-eds-charcoal/10 pt-5 text-sm text-eds-charcoal/90">
+                    {s.points.map((p) => (
+                      <li key={p} className="flex gap-2">
+                        <span className="text-eds-blue" aria-hidden>
+                          ·
+                        </span>
+                        <span>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={s.href}
+                    className="mt-4 inline-flex text-sm font-semibold text-eds-green hover:underline"
+                  >
+                    Learn more
+                  </Link>
                 </div>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-eds-muted">
-                  {s.blurb}
-                </p>
-                <ul className="mt-5 space-y-2 border-t border-eds-charcoal/10 pt-5 text-sm text-eds-charcoal/90">
-                  {s.points.map((p) => (
-                    <li key={p} className="flex gap-2">
-                      <span className="text-eds-blue" aria-hidden>
-                        ·
-                      </span>
-                      <span>{p}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={s.href}
-                  className="mt-4 inline-flex text-sm font-semibold text-eds-green hover:underline"
-                >
-                  Learn more
-                </Link>
               </article>
             ))}
           </div>

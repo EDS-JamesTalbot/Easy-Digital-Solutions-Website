@@ -18,9 +18,9 @@ export default function PayrollProcessingPage() {
         <Image
           src={smoothPayLogo.src}
           alt={smoothPayLogo.alt}
-          width={240}
-          height={64}
-          className="h-10 w-auto max-w-[200px] object-contain object-right sm:h-12 sm:max-w-[240px]"
+          width={420}
+          height={120}
+          className="h-16 w-auto max-w-[min(100%,20rem)] object-contain object-right sm:h-[4.75rem] sm:max-w-[22rem] md:h-[5.25rem] md:max-w-[24rem]"
           priority
         />
       }
