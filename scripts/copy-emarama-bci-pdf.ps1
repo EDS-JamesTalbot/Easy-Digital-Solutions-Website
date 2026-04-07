@@ -1,4 +1,4 @@
-# Copies the BCI eMarama PDF from OneDrive into public/private for the hidden /r/emarama-bci page.
+# Copies the BCI eMarama PDF from OneDrive into public/private for /emarama-bci (bare PDF viewer).
 $ErrorActionPreference = "Stop"
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $destDir = Join-Path $repoRoot "public\private"

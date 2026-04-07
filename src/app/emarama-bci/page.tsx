@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function EmaramaBciHiddenPage() {
+export default function EmaramaBciPage() {
   return (
     <iframe
       title="Introducing eMarama — BCI (PDF)"
       src={PDF_PATH}
-      className="h-[calc(100dvh-8rem)] w-full min-h-[500px] border-0 bg-white"
+      className="h-full w-full border-0 bg-white"
     />
   );
 }
