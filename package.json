@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "copy:emarama-pdf": "powershell -ExecutionPolicy Bypass -File scripts/copy-emarama-bci-pdf.ps1"
+    "copy:emarama-pdf": "powershell -ExecutionPolicy Bypass -File scripts/copy-emarama-bci-pdf.ps1",
+    "pdf:emarama-title": "node scripts/set-emarama-pdf-title.mjs"
   },
   "dependencies": {
     "next": "16.2.2",
@@ -21,6 +22,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
+    "pdf-lib": "^1.17.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

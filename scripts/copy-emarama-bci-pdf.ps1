@@ -11,3 +11,9 @@ if (-not (Test-Path -LiteralPath $src)) {
 }
 Copy-Item -LiteralPath $src -Destination $destFile -Force
 Write-Host "OK: $destFile"
+Push-Location $repoRoot
+try {
+    node (Join-Path $repoRoot "scripts\set-emarama-pdf-title.mjs")
+} finally {
+    Pop-Location
+}
