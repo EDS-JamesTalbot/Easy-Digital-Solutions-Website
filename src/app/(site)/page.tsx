@@ -7,6 +7,7 @@ import {
   digitalMarketingImages,
   excelImages,
   homeServiceImages,
+  payrollServiceTileImage,
   testimonialImages,
   websiteDesignExampleImage,
 } from "@/lib/wix-images";
@@ -24,6 +25,10 @@ const homeServiceTileImages = [
   {
     src: websiteDesignExampleImage.src,
     alt: websiteDesignExampleImage.alt,
+  },
+  {
+    src: payrollServiceTileImage.src,
+    alt: payrollServiceTileImage.alt,
   },
 ] as const;
 
@@ -123,6 +128,18 @@ const serviceCards = [
       "This site is our own build (see the Website design page for our stack)",
     ],
     accent: "blue" as const,
+  },
+  {
+    title: "Payroll processing",
+    href: "/payroll-processing",
+    blurb:
+      "SmoothPay payroll for Cook Islands businesses — weekly runs, PAYE, CINSF, payslips, and reporting.",
+    points: [
+      "Setup, employee records, and business settings (RMD, bank, VAT)",
+      "Draft summary for approval; Direct Credit and leave reports after pay",
+      "Standard reporting, ad hoc requests, and monthly accountant liaison",
+    ],
+    accent: "gold" as const,
   },
 ];
 

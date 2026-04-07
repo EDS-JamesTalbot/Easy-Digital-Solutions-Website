@@ -41,6 +41,11 @@ export const serviceLinks = [
     label: "Website design",
     short: "Websites",
   },
+  {
+    href: "/payroll-processing",
+    label: "Payroll processing",
+    short: "Payroll",
+  },
 ] as const;
 
 export const mainNav = [
