@@ -1,11 +1,23 @@
 import Link from "next/link";
 import { WaveDivider } from "@/components/WaveDivider";
+import {
+  ServiceTileGraphic,
+  type ServiceTileGraphicId,
+} from "@/components/ServiceTileGraphic";
 import { edsPrimaryButtonClass } from "@/lib/eds-button";
 
-const serviceCards = [
+const serviceCards: {
+  title: string;
+  href: string;
+  blurb: string;
+  points: readonly string[];
+  accent: "green" | "blue" | "gold";
+  graphicId: ServiceTileGraphicId;
+}[] = [
   {
     title: "Dashboards & reporting",
     href: "/dashboards-reporting",
+    graphicId: "dashboards",
     blurb:
       "Interactive dashboards, Power BI, automated reporting, and data visualisation.",
     points: [
@@ -18,6 +30,7 @@ const serviceCards = [
   {
     title: "Consulting",
     href: "/consulting",
+    graphicId: "consulting",
     blurb:
       "Process improvement, project management, data analysis, and HR support.",
     points: [
@@ -30,6 +43,7 @@ const serviceCards = [
   {
     title: "Application creation",
     href: "/application-creation",
+    graphicId: "applications",
     blurb:
       "Digital forms, automation, helpdesk, inventory, and custom Excel/VBA/Python tools.",
     points: [
@@ -42,6 +56,7 @@ const serviceCards = [
   {
     title: "Learning solutions",
     href: "/learning-solutions",
+    graphicId: "learning",
     blurb:
       "Activity-based training, retreats, facilitation, and custom e-learning.",
     points: [
@@ -54,6 +69,7 @@ const serviceCards = [
   {
     title: "Excel training",
     href: "/excel-training",
+    graphicId: "excel",
     blurb:
       "One-on-one and group Excel training—with a Microsoft Excel Expert.",
     points: [
@@ -66,6 +82,7 @@ const serviceCards = [
   {
     title: "Client testimonials",
     href: "/client-testimonials",
+    graphicId: "testimonials",
     blurb:
       "Feedback from health, retail, government, and community clients.",
     points: [
@@ -78,6 +95,7 @@ const serviceCards = [
   {
     title: "Digital marketing",
     href: "/digital-marketing",
+    graphicId: "marketing",
     blurb:
       "Social media, content, strategy, and performance monitoring.",
     points: [
@@ -90,6 +108,7 @@ const serviceCards = [
   {
     title: "Website design",
     href: "/website-design",
+    graphicId: "website",
     blurb:
       "Next.js, TypeScript, Tailwind CSS, and Cursor AI—planning, build, and launch with your brand.",
     points: [
@@ -102,6 +121,7 @@ const serviceCards = [
   {
     title: "Payroll processing",
     href: "/payroll-processing",
+    graphicId: "payroll",
     blurb:
       "SmoothPay payroll for Cook Islands businesses — weekly runs, PAYE, CINSF, payslips, and reporting.",
     points: [
@@ -216,14 +236,19 @@ export default function Home() {
                 key={s.title}
                 className={`flex flex-col rounded-2xl border border-eds-charcoal/10 bg-white p-6 shadow-sm ring-1 ${accentRing(s.accent)} transition hover:-translate-y-0.5 hover:shadow-md`}
               >
-                <div className="flex items-center gap-2">
-                  <span
-                    className={`h-2.5 w-2.5 rounded-full ${accentDot(s.accent)}`}
-                    aria-hidden
-                  />
-                  <h3 className="font-display text-lg font-bold capitalize text-eds-charcoal">
-                    {s.title}
-                  </h3>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`h-2.5 w-2.5 shrink-0 rounded-full ${accentDot(s.accent)}`}
+                        aria-hidden
+                      />
+                      <h3 className="font-display text-lg font-bold capitalize text-eds-charcoal">
+                        {s.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <ServiceTileGraphic id={s.graphicId} accent={s.accent} />
                 </div>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-eds-muted">
                   {s.blurb}

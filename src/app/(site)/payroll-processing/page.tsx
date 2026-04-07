@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ServicePageShell } from "@/components/ServicePageShell";
+import { smoothPayLogo } from "@/lib/smoothpay-brand";
 
 export const metadata: Metadata = {
   title: "Payroll processing",
@@ -15,8 +16,8 @@ export default function PayrollProcessingPage() {
       title="Payroll processing with SmoothPay"
       titleAside={
         <Image
-          src="/brands/smoothpay-logo.png"
-          alt="SmoothPay"
+          src={smoothPayLogo.src}
+          alt={smoothPayLogo.alt}
           width={240}
           height={64}
           className="h-10 w-auto max-w-[200px] object-contain object-right sm:h-12 sm:max-w-[240px]"
