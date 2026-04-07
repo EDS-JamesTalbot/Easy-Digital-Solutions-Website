@@ -186,12 +186,6 @@ export const testimonialPageGallery = [
   },
 ] as const;
 
-/** Payroll processing — home tile (HR / workforce systems imagery). */
-export const payrollServiceTileImage = {
-  src: applicationPageImages[3].src,
-  alt: "Payroll and HR records — workforce information in a business system.",
-} as const;
-
 export const digitalMarketingImages = [
   {
     src: "https://static.wixstatic.com/media/be63cf_53a6108c1c9f468eaeac483c77388f59~mv2.jpg/v1/crop/x_40,y_47,w_437,h_419/fill/w_432,h_414,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/graphic-design-icon-png-16.jpg",

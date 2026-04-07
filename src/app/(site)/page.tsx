@@ -1,36 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { WaveDivider } from "@/components/WaveDivider";
-import {
-  consultingHeroImage,
-  dashboardsImages,
-  digitalMarketingImages,
-  excelImages,
-  homeServiceImages,
-  payrollServiceTileImage,
-  testimonialImages,
-  websiteDesignExampleImage,
-} from "@/lib/wix-images";
 import { edsPrimaryButtonClass } from "@/lib/eds-button";
-import { serviceLinks } from "@/lib/nav";
-
-const homeServiceTileImages = [
-  { src: dashboardsImages[0].src, alt: dashboardsImages[0].alt },
-  { src: consultingHeroImage, alt: "Consulting services" },
-  { src: homeServiceImages.forms, alt: "Application and data entry forms" },
-  { src: homeServiceImages.training, alt: "Learning and training programmes" },
-  { src: excelImages[0].src, alt: excelImages[0].alt },
-  { src: testimonialImages[0].src, alt: testimonialImages[0].alt },
-  { src: digitalMarketingImages[0].src, alt: digitalMarketingImages[0].alt },
-  {
-    src: websiteDesignExampleImage.src,
-    alt: websiteDesignExampleImage.alt,
-  },
-  {
-    src: payrollServiceTileImage.src,
-    alt: payrollServiceTileImage.alt,
-  },
-] as const;
 
 const serviceCards = [
   {
@@ -135,8 +105,8 @@ const serviceCards = [
     blurb:
       "SmoothPay payroll for Cook Islands businesses — weekly runs, PAYE, CINSF, payslips, and reporting.",
     points: [
-      "Setup, employee records, and business settings (RMD, bank, VAT)",
-      "Draft summary for approval; Direct Credit and leave reports after pay",
+      "System Setup, employee records, and business settings & configuration",
+      "Payroll processing — email payslips and payroll reporting for business",
       "Standard reporting, ad hoc requests, and monthly accountant liaison",
     ],
     accent: "gold" as const,
@@ -240,33 +210,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-8 grid w-full min-w-0 grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8">
-            {serviceLinks.map((link, i) => {
-              const img = homeServiceTileImages[i];
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="group flex min-w-0 flex-col overflow-hidden rounded-xl border border-eds-charcoal/10 bg-white shadow-sm transition hover:border-eds-green/50 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-eds-green"
-                >
-                  <div className="relative aspect-[3/2] w-full overflow-hidden">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 14vw"
-                      className="object-cover transition group-hover:opacity-95"
-                    />
-                  </div>
-                  <span className="flex min-h-[2.75rem] items-center justify-center px-1.5 py-2 text-center text-[0.65rem] font-medium capitalize leading-tight text-eds-charcoal sm:min-h-0 sm:px-2 sm:text-xs lg:text-[0.8rem]">
-                    {link.label}
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {serviceCards.map((s) => (
               <article
                 key={s.title}
