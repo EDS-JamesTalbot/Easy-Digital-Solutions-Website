@@ -47,7 +47,7 @@ export function SiteFooter() {
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="capitalize transition hover:text-eds-gold-soft"
+                    className="transition hover:text-eds-gold-soft"
                   >
                     {s.label}
                   </Link>

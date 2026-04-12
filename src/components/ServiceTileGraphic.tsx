@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { smoothPayLogo } from "@/lib/smoothpay-brand";
 
 export type ServiceTileGraphicId =
+  | "powerBi"
   | "dashboards"
   | "consulting"
   | "applications"
@@ -54,6 +55,27 @@ function WatermarkSvg({
  * Sits behind copy; keep opacity low for readability.
  */
 export function ServiceTileBackground({ id, accent }: Props) {
+  if (id === "powerBi") {
+    return (
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        aria-hidden
+      >
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.09] sm:opacity-[0.11]">
+          <div className="relative h-[min(20rem,92%)] w-[118%] min-h-[16rem] max-w-none sm:h-[min(24rem,96%)] sm:min-h-[20rem]">
+            <Image
+              src="/power-bi-logo-watermark.png"
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw, 480px"
+              className="object-contain object-center"
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (id === "payroll") {
     return (
       <div

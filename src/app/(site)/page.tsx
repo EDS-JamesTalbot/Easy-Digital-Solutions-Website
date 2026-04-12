@@ -15,15 +15,28 @@ const serviceCards: {
   graphicId: ServiceTileGraphicId;
 }[] = [
   {
+    title: "Power BI Consulting",
+    href: "/power-bi-consulting",
+    graphicId: "powerBi",
+    blurb:
+      "Design, build, and publish Power BI solutions—from trusted models and measures to reports your stakeholders can rely on.",
+    points: [
+      "Data modelling, DAX, and performance tuning",
+      "Power BI Service workspaces, sharing, and refresh",
+      "Report design, documentation, and mobile-ready layouts",
+    ],
+    accent: "blue" as const,
+  },
+  {
     title: "Dashboards & reporting",
     href: "/dashboards-reporting",
     graphicId: "dashboards",
     blurb:
-      "Interactive dashboards, Power BI, automated reporting, and data visualisation.",
+      "Excel-based dashboards and reporting—clear visuals and recurring numbers your team can refresh and own.",
     points: [
-      "Power BI & custom reporting",
-      "Data integration & visualisation",
-      "KPI and HR dashboards",
+      "Tables, pivots, charts, and slicers for at-a-glance KPIs",
+      "Power Query and structured imports for repeatable refresh",
+      "Management-ready layouts for operations, finance, and HR views",
     ],
     accent: "blue" as const,
   },
@@ -243,7 +256,7 @@ export default function Home() {
                       className={`h-2.5 w-2.5 shrink-0 rounded-full ${accentDot(s.accent)}`}
                       aria-hidden
                     />
-                    <h3 className="font-display text-lg font-bold capitalize text-eds-charcoal">
+                    <h3 className="font-display text-lg font-bold text-eds-charcoal">
                       {s.title}
                     </h3>
                   </div>

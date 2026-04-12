@@ -98,7 +98,7 @@ export function SiteHeader() {
                       key={s.href}
                       href={s.href}
                       role="menuitem"
-                      className={`block px-4 py-2.5 text-sm capitalize ${
+                      className={`block px-4 py-2.5 text-sm ${
                         pathname === s.href
                           ? "bg-eds-green/10 font-semibold text-eds-green"
                           : "text-eds-charcoal hover:bg-eds-blue-soft"
@@ -194,7 +194,7 @@ export function SiteHeader() {
               <Link
                 key={s.href}
                 href={s.href}
-                className={`rounded-lg px-3 py-2.5 text-base capitalize ${
+                className={`rounded-lg px-3 py-2.5 text-base ${
                   pathname === s.href
                     ? "bg-eds-green/10 font-semibold text-eds-green"
                     : "font-medium text-eds-charcoal hover:bg-eds-blue-soft"

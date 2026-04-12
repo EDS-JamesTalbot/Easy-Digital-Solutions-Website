@@ -2,6 +2,11 @@
 
 export const serviceLinks = [
   {
+    href: "/power-bi-consulting",
+    label: "Power BI Consulting",
+    short: "Power BI",
+  },
+  {
     href: "/dashboards-reporting",
     label: "Dashboards & reporting",
     short: "Dashboards",
