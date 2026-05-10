@@ -24,6 +24,16 @@ function siteMetadataBase(): URL {
       /* fall through */
     }
   }
+  // Prefer production domain (works on previews too); avoids VERCEL_URL which breaks when
+  // Deployment Protection (Standard) restricts generated deployment URLs — see Vercel docs.
+  const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (productionHost) {
+    return new URL(`https://${productionHost}`);
+  }
+  const branchHost = process.env.VERCEL_BRANCH_URL;
+  if (branchHost) {
+    return new URL(`https://${branchHost}`);
+  }
   if (process.env.VERCEL_URL) {
     return new URL(`https://${process.env.VERCEL_URL}`);
   }

@@ -19,11 +19,11 @@ const serviceCards: {
     href: "/power-bi-consulting",
     graphicId: "powerBi",
     blurb:
-      "Design, build, and publish Power BI solutions—from trusted models and measures to reports your stakeholders can rely on.",
+      "See how the business is really performing—from headline metrics for your Board and CEO to the operational detail your Managers need—with dashboards that stay current on desktop, online, and mobile.",
     points: [
-      "Data modelling, DAX, and performance tuning",
-      "Power BI Service workspaces, sharing, and refresh",
-      "Report design, documentation, and mobile-ready layouts",
+      "One trusted view of the numbers—fewer competing spreadsheets to reconcile",
+      "Publish online with automatic refresh so invited people always see up-to-date results",
+      "Executive summaries and manager-ready detail, still readable on a phone",
     ],
     accent: "blue" as const,
   },

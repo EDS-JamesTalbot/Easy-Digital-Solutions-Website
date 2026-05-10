@@ -52,27 +52,29 @@ export default function PowerBiConsultingPage() {
       showFooterCta={false}
     >
       <p className="!mt-0 text-base leading-relaxed text-eds-charcoal sm:text-lg">
-        <strong>Easy Digital Solutions</strong> offers end-to-end{" "}
-        <strong>Power BI consulting</strong>: discovery and requirements, data
-        modelling and relationships, measures in DAX, performance tuning, and
-        report design that matches how your people actually make decisions. We
-        can own the full analysis workflow—defining KPIs, validating numbers
-        with subject-matter experts, surfacing variance and drivers, and writing
-        the on-page narrative so charts read as a story, not a puzzle. Our{" "}
-        <strong>content creation</strong> covers titles, section layout,
-        conditional formatting, tooltips, and executive-ready callouts so
-        stakeholders get clarity without needing a technical middle layer.
+        With well-designed <strong>Power BI dashboards</strong>, everyone sees
+        the same truth—just at the depth that matches their job. Your{" "}
+        <strong>Board</strong> gains a calm, high-level view of financial health,
+        risk, and progress against strategy without wading through spreadsheets.
+        Your <strong>CEO</strong> gets a single pane across the whole business:
+        revenue, operations, customers, and exceptions in one place, so
+        priorities stay aligned. <strong>Senior managers</strong> move faster
+        with the right slice of performance—enough to steer a division or
+        region, without noise. <strong>Managers</strong> drill into the detail
+        they need day to day: trends, variances, and line-level drivers, so
+        decisions are grounded in evidence instead of anecdotes.
       </p>
 
       <p className="text-base leading-relaxed text-eds-charcoal sm:text-lg">
-        We also support <strong>publishing to Power BI Service</strong>{" "}
-        (Microsoft Fabric): workspace setup, semantic model deployment,{" "}
-        <strong>Power BI Service</strong> permissions and sharing, gateways and
-        scheduled refresh where needed, and handover so your team can sustain
-        releases. That includes{" "}
-        <strong>phone layouts and the Power BI mobile experience</strong>—so
-        the same insights remain readable when the report is consumed on a
-        handset after publish.
+        That experience carries across{" "}
+        <strong>Power BI Desktop</strong> for analysis and rich exploration,{" "}
+        <strong>Power BI Service</strong> for secure sharing, collaboration, and
+        always-current numbers the organisation can trust, and{" "}
+        <strong>Power BI Mobile</strong> so leaders and frontline teams can check
+        KPIs between meetings or on the road. The outcome is fewer ad hoc
+        reports, less time reconciling figures, and more confident conversations
+        from the boardroom to the shop floor—backed by dashboards people
+        actually use.
       </p>
 
       <p className="text-base leading-relaxed text-eds-charcoal sm:text-lg">

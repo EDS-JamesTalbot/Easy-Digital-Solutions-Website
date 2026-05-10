@@ -1,0 +1,2 @@
+# Build-time only: creates a single-file .exe for Windows clients
+pyinstaller>=6.0,<8
