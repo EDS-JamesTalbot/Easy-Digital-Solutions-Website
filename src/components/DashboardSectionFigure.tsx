@@ -12,11 +12,11 @@ export function DashboardSectionFigure({
   alt,
 }: DashboardSectionFigureProps) {
   return (
-    <div className="mt-6">
+    <div className="mt-4 sm:mt-6">
       <p className="font-display text-sm font-semibold tracking-wide text-eds-green">
         {label}
       </p>
-      <figure className="mt-2 overflow-hidden rounded-xl border border-eds-charcoal/10 bg-white shadow-sm">
+      <figure className="mt-1.5 overflow-hidden rounded-xl border border-eds-charcoal/10 bg-white shadow-sm sm:mt-2">
         <div className="flex w-full items-center justify-center bg-eds-blue-soft/30 px-2 py-3 sm:px-4 sm:py-4">
           <Image
             src={src}

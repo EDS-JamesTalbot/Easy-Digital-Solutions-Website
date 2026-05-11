@@ -18,6 +18,7 @@ export default function DashboardsReportingPage() {
     <ServicePageShell
       title="Dashboard | Reporting | Data Analytics"
       showFooterCta={false}
+      compactMobile
     >
       <p className="!mt-0 text-base leading-relaxed text-eds-charcoal sm:text-lg">
         At EDS, we design and build custom dashboards and reports that make it
@@ -28,11 +29,11 @@ export default function DashboardsReportingPage() {
         you full confidence to manage, monitor, and make sense of your data.
       </p>
 
-      <section className="mt-12 sm:mt-16">
+      <section className="mt-7 sm:mt-16">
         <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
           Dashboard Reporting
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-eds-charcoal">
+        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
           Dashboard reporting presents key information clearly and
           efficiently—often on a single, easy-to-read page—saving your team
           valuable time. The example shown here is an interactive dashboard
@@ -50,11 +51,11 @@ export default function DashboardsReportingPage() {
         />
       </section>
 
-      <section className="mt-14 border-t border-eds-charcoal/10 pt-12 sm:mt-16 sm:pt-16">
+      <section className="mt-8 border-t border-eds-charcoal/10 pt-7 sm:mt-16 sm:pt-16">
         <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
           Dashboard Reporting — Analysis
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-eds-charcoal">
+        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
           The following dashboard is where all the analysis is done for the end
           user. Key messaging using color codes with summarized analysis and
           recommendations.
@@ -66,11 +67,11 @@ export default function DashboardsReportingPage() {
         />
       </section>
 
-      <section className="mt-14 border-t border-eds-charcoal/10 pt-12 sm:mt-16 sm:pt-16">
+      <section className="mt-8 border-t border-eds-charcoal/10 pt-7 sm:mt-16 sm:pt-16">
         <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
           Dashboard Reporting — HR | KPI&apos;s
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-eds-charcoal">
+        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
           HR managers need fast, clear access to critical KPIs all in one place.
           Below sample dashboard highlights wage and employee trends alongside
           average annual wages. Additional metrics can be easily added, such as
@@ -85,14 +86,14 @@ export default function DashboardsReportingPage() {
         />
       </section>
 
-      <div className="mt-14 border-t border-eds-charcoal/10 pt-10 text-center sm:mt-16 sm:pt-12">
+      <div className="mt-8 border-t border-eds-charcoal/10 pt-7 text-center sm:mt-16 sm:pt-12">
         <p className="text-base font-medium text-eds-charcoal">
           Contact us for more information and to discuss your specific
           requirements.
         </p>
         <Link
           href="/contact"
-          className={`${edsPrimaryButtonClass} mt-6 uppercase tracking-wide`}
+          className={`${edsPrimaryButtonClass} mt-4 uppercase tracking-wide sm:mt-6`}
         >
           Request a demo
         </Link>

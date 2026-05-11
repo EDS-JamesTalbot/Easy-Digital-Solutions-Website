@@ -50,6 +50,7 @@ export default function PowerBiConsultingPage() {
       eyebrow="Services"
       title="Power BI Consulting"
       showFooterCta={false}
+      compactMobile
     >
       <p className="!mt-0 text-base leading-relaxed text-eds-charcoal sm:text-lg">
         With well-designed <strong>Power BI dashboards</strong>, everyone sees
@@ -87,11 +88,11 @@ export default function PowerBiConsultingPage() {
         who they are reaching, and what behaviours lift results.
       </p>
 
-      <section className="mt-12 sm:mt-16">
+      <section className="mt-7 sm:mt-16">
         <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
           1. Campaign insights
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-eds-charcoal">
+        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
           Campaign performance compares attributed purchases and sales revenue
           across campaigns, product mix by campaign, channel mix, and where
           buyers spend the most—ideal for prioritising creative, offers, and
@@ -104,11 +105,11 @@ export default function PowerBiConsultingPage() {
         />
       </section>
 
-      <section className="mt-14 border-t border-eds-charcoal/10 pt-12 sm:mt-16 sm:pt-16">
+      <section className="mt-8 border-t border-eds-charcoal/10 pt-7 sm:mt-16 sm:pt-16">
         <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
           2. Buyer composition and profile
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-eds-charcoal">
+        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
           Buyer composition summarises who is in the base: age, income,
           education, household structure, engagement signals, and how category
           preferences shift with age—helping marketers tailor segments and
@@ -121,11 +122,11 @@ export default function PowerBiConsultingPage() {
         />
       </section>
 
-      <section className="mt-14 border-t border-eds-charcoal/10 pt-12 sm:mt-16 sm:pt-16">
+      <section className="mt-8 border-t border-eds-charcoal/10 pt-7 sm:mt-16 sm:pt-16">
         <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
           3. Purchasing drivers
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-eds-charcoal">
+        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
           Purchasing drivers uses Power BI&apos;s Key Influencers analysis to
           highlight factors that increase the likelihood of accepting a campaign
           or lifting average sales—paired with supporting visuals so insights
@@ -139,7 +140,7 @@ export default function PowerBiConsultingPage() {
       </section>
 
       <section
-        className="mt-14 rounded-2xl border border-eds-charcoal/10 bg-eds-blue-soft/25 p-5 sm:mt-16 sm:p-6"
+        className="mt-8 rounded-2xl border border-eds-charcoal/10 bg-eds-blue-soft/25 p-4 sm:mt-16 sm:p-6"
         aria-labelledby="mobile-published-heading"
       >
         <h2
@@ -148,7 +149,7 @@ export default function PowerBiConsultingPage() {
         >
           Mobile layout — published to Power BI Service
         </h2>
-        <p className="mt-3 text-sm leading-relaxed text-eds-charcoal sm:text-base">
+        <p className="mt-2 text-sm leading-relaxed text-eds-charcoal sm:mt-3 sm:text-base">
           The three screenshots below are the{" "}
           <strong>Mobile View</strong> of the same Market Mindz report, in
           sequence: <strong>Campaign</strong>, <strong>Buyer</strong>, and{" "}
@@ -158,7 +159,7 @@ export default function PowerBiConsultingPage() {
           filters).
         </p>
 
-        <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4 lg:gap-6">
+        <div className="mt-4 grid grid-cols-1 gap-5 md:mt-6 md:grid-cols-3 md:gap-4 lg:gap-6">
           {mobileRow.map((item) => (
             <figure
               key={item.src}
@@ -176,7 +177,7 @@ export default function PowerBiConsultingPage() {
                   />
                 </div>
               </div>
-              <figcaption className="mt-3 font-display text-sm font-semibold text-eds-green">
+              <figcaption className="mt-2 font-display text-sm font-semibold text-eds-green sm:mt-3">
                 {item.title}
                 <span className="mt-1 block font-sans text-xs font-normal text-eds-charcoal/80">
                   Mobile Layout · Power BI Service (published)
@@ -187,7 +188,7 @@ export default function PowerBiConsultingPage() {
         </div>
       </section>
 
-      <div className="mt-14 border-t border-eds-charcoal/10 pt-10 text-center sm:mt-16 sm:pt-12">
+      <div className="mt-8 border-t border-eds-charcoal/10 pt-7 text-center sm:mt-16 sm:pt-12">
         <p className="text-base font-medium text-eds-charcoal">
           Thinking about Dashboards like these for your own organisation? We
           can help bring your underlying data together so it stays dependable,
@@ -198,7 +199,7 @@ export default function PowerBiConsultingPage() {
         </p>
         <Link
           href="/contact"
-          className={`${edsPrimaryButtonClass} mt-6 uppercase tracking-wide`}
+          className={`${edsPrimaryButtonClass} mt-4 uppercase tracking-wide sm:mt-6`}
         >
           Discuss Power BI
         </Link>

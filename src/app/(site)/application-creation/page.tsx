@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const sectionHeading =
-  "!mt-10 font-display text-xl font-bold !text-eds-teal-label sm:text-2xl";
+  "!mt-6 font-display text-xl font-bold !text-eds-teal-label sm:!mt-10 sm:text-2xl";
 
 type ExampleImage = {
   src: string;
@@ -119,6 +119,7 @@ export default function ApplicationCreationPage() {
       title="Automating your business processes"
       ctaLabel="Contact us today"
       ctaSubject="Website Enquiry — Application Creation"
+      compactMobile
     >
       <p className="!mt-0 text-lg font-medium text-eds-charcoal">
         Data efficiency
@@ -191,19 +192,19 @@ export default function ApplicationCreationPage() {
         reports. Let us handle the data, so you can focus on decision-making.
       </p>
 
-      <section className="!mt-14 space-y-14 border-t border-eds-charcoal/10 pt-12">
+      <section className="!mt-8 space-y-10 border-t border-eds-charcoal/10 pt-8 sm:!mt-14 sm:space-y-14 sm:pt-12">
         <h2 className="!mt-0 font-display text-2xl font-bold !text-eds-teal-label sm:text-3xl">
           Some examples:
         </h2>
 
         {applicationExamples.map((ex) => (
-          <article key={ex.title} className="space-y-5">
+          <article key={ex.title} className="space-y-4 sm:space-y-5">
             <h3 className="!mt-0 font-display text-lg font-bold !text-eds-teal-label sm:text-xl">
               {ex.title}
             </h3>
             <p>{ex.body}</p>
             {ex.images.length > 0 ? (
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {ex.images.map((img, i) => {
                 const isLocal = img.src.startsWith("/");
                 const w = img.width ?? 900;
@@ -253,7 +254,9 @@ export default function ApplicationCreationPage() {
         ))}
       </section>
 
-      <p className="!mt-12 font-medium">Start automating some of your business processes today.</p>
+      <p className="!mt-8 font-medium sm:!mt-12">
+        Start automating some of your business processes today.
+      </p>
       <p>
         For Excel training related to these tools, see{" "}
         <Link
