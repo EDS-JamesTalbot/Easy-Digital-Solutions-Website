@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ServicePageShell } from "@/components/ServicePageShell";
 
 export const metadata: Metadata = {
-  title: "Learning solutions",
+  title: "Learning Solutions",
   description:
     "Activity-based training, retreats, facilitation, and custom e-learning — Easy Digital Solutions.",
 };
@@ -37,8 +37,8 @@ const retreatClients = [
 export default function LearningSolutionsPage() {
   return (
     <ServicePageShell
-      eyebrow="Learning solutions"
-      title="Learning solutions"
+      eyebrow="Learning Solutions"
+      title="Learning Solutions"
       ctaLabel="Contact us about training"
     >
       <p>

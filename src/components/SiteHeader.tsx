@@ -92,7 +92,7 @@ export function SiteHeader() {
 
             {servicesOpen ? (
               <div className="absolute left-0 top-full z-50 pt-1" role="menu">
-                <div className="max-h-[min(70vh,22rem)] min-w-[16rem] overflow-y-auto rounded-xl border border-eds-charcoal/10 bg-white py-2 shadow-lg">
+                <div className="max-h-[calc(100vh-6rem)] min-w-[16rem] overflow-y-auto rounded-xl border border-eds-charcoal/10 bg-white py-2 shadow-lg">
                   {serviceLinks.map((s) => (
                     <Link
                       key={s.href}
@@ -204,20 +204,22 @@ export function SiteHeader() {
                 {s.label}
               </Link>
             ))}
-            <Link
-              href="/about"
-              className="rounded-lg px-3 py-2.5 text-base font-medium text-eds-charcoal hover:bg-eds-blue-soft"
-              onClick={() => setMobileOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className="rounded-lg px-3 py-2.5 text-base font-medium text-eds-charcoal hover:bg-eds-blue-soft"
-              onClick={() => setMobileOpen(false)}
-            >
-              Contact
-            </Link>
+            {mainNav
+              .filter((n) => n.href !== "/")
+              .map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`rounded-lg px-3 py-2.5 text-base ${
+                    pathname === item.href
+                      ? "bg-eds-green/10 font-semibold text-eds-green"
+                      : "font-medium text-eds-charcoal hover:bg-eds-blue-soft"
+                  }`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
             <Link
               href="/contact"
               className={`${edsPrimaryButtonClass} mt-2 w-full justify-center`}

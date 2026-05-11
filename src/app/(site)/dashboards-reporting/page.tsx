@@ -6,7 +6,7 @@ import { edsPrimaryButtonClass } from "@/lib/eds-button";
 import { dashboardsImages } from "@/lib/wix-images";
 
 export const metadata: Metadata = {
-  title: "Dashboards & reporting",
+  title: "Dashboards & Reporting",
   description:
     "Custom dashboards, reporting, and data analytics for the Cook Islands — Easy Digital Solutions.",
 };

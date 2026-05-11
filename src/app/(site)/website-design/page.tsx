@@ -5,7 +5,7 @@ import { ServicePageShell } from "@/components/ServicePageShell";
 import { websiteDesignExampleImage } from "@/lib/wix-images";
 
 export const metadata: Metadata = {
-  title: "Website design",
+  title: "Website Design",
   description:
     "Secure Next.js sites—HTTPS, modern hosting, and optional Clerk auth for sign-in and protected areas — Easy Digital Solutions, Cook Islands.",
 };
@@ -15,7 +15,7 @@ export default function WebsiteDesignPage() {
 
   return (
     <ServicePageShell
-      eyebrow="Website design"
+      eyebrow="Website Design"
       title="Websites that work as hard as you do"
       ctaLabel="Talk to us about your site"
     >

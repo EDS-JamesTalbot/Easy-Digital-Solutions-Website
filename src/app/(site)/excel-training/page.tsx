@@ -5,7 +5,7 @@ import { WixImageGallery } from "@/components/WixImageGallery";
 import { excelImages } from "@/lib/wix-images";
 
 export const metadata: Metadata = {
-  title: "Excel training",
+  title: "Excel Training",
   description:
     "Tailored Excel training from basics to Power Query and VBA — Microsoft Excel Expert, Cook Islands.",
 };
@@ -18,7 +18,7 @@ export default function ExcelTrainingPage() {
   const excelGallery = excelImages;
   return (
     <ServicePageShell
-      eyebrow="Excel training"
+      eyebrow="Excel Training"
       title="Excel training services"
       titleAside={
         <>

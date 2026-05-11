@@ -5,7 +5,7 @@ import { WixImageGallery } from "@/components/WixImageGallery";
 import { digitalMarketingImages } from "@/lib/wix-images";
 
 export const metadata: Metadata = {
-  title: "Digital marketing",
+  title: "Digital Marketing",
   description:
     "Social media, content, marketing strategy, and performance insight — Easy Digital Solutions.",
 };
@@ -14,7 +14,7 @@ export default function DigitalMarketingPage() {
   const marketingGallery = digitalMarketingImages;
   return (
     <ServicePageShell
-      eyebrow="Digital marketing"
+      eyebrow="Digital Marketing"
       title="Digital marketing & content"
       ctaLabel="Talk to us about your channels"
     >

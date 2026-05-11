@@ -37,9 +37,9 @@ export const consultingHeroImage =
 /** Website design — example e-commerce shop layout (local asset). */
 export const websiteDesignExampleImage = {
   src: "/services/website-design-shop-example.png",
-  alt: "E-commerce shop page — product grid, filters, cart, and navigation (example site by Easy Digital Solutions).",
-  width: 1024,
-  height: 466,
+  alt: "E-commerce shop page — product grid, header navigation, cart, pagination, and footer (example site by Easy Digital Solutions).",
+  width: 2880,
+  height: 3782,
 } as const;
 
 export const homeServiceImages = {

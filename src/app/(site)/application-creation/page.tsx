@@ -12,7 +12,7 @@ import {
 } from "@/lib/wix-images";
 
 export const metadata: Metadata = {
-  title: "Application creation",
+  title: "Application Creation",
   description:
     "Digital forms, automation, CRM, helpdesk, and custom business applications — Easy Digital Solutions.",
 };
@@ -115,7 +115,7 @@ reports and more.`,
 export default function ApplicationCreationPage() {
   return (
     <ServicePageShell
-      eyebrow="Application creation"
+      eyebrow="Application Creation"
       title="Automating your business processes"
       ctaLabel="Contact us today"
       ctaSubject="Website Enquiry — Application Creation"

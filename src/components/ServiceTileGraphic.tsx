@@ -5,6 +5,7 @@ import { smoothPayLogo } from "@/lib/smoothpay-brand";
 export type ServiceTileGraphicId =
   | "powerBi"
   | "dashboards"
+  | "eLearning"
   | "consulting"
   | "applications"
   | "learning"
@@ -140,6 +141,15 @@ export function ServiceTileBackground({ id, accent }: Props) {
           <path d="M10 12c8-4 20-4 28 0v22c-8 4-20 4-28 0V12z" />
           <path d="M24 12v22" />
           <path d="M14 34c4 2 10 2 14 0" />
+        </WatermarkSvg>,
+      );
+    case "eLearning":
+      return wrap(
+        <WatermarkSvg accent={accent}>
+          <rect x="8" y="10" width="32" height="22" rx="2" />
+          <path d="M5 34h38l-2 4H7z" />
+          <path d="M21 17l9 5-9 5z" fill="currentColor" stroke="none" />
+          <path d="M16 41h16" opacity={0.5} />
         </WatermarkSvg>,
       );
     case "excel":

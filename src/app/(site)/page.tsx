@@ -28,7 +28,7 @@ const serviceCards: {
     accent: "blue" as const,
   },
   {
-    title: "Dashboards & reporting",
+    title: "Dashboards & Reporting",
     href: "/dashboards-reporting",
     graphicId: "dashboards",
     blurb:
@@ -37,6 +37,32 @@ const serviceCards: {
       "Tables, pivots, charts, and slicers for at-a-glance KPIs",
       "Power Query and structured imports for repeatable refresh",
       "Management-ready layouts for operations, finance, and HR views",
+    ],
+    accent: "blue" as const,
+  },
+  {
+    title: "E-Learning",
+    href: "/e-learning",
+    graphicId: "eLearning",
+    blurb:
+      "Custom e-learning modules, animated explainers, interactive lessons, and quizzes — designed for staff induction, skills development, and technical training.",
+    points: [
+      "Storyboarding and content design",
+      "Animation videos and interactive modules",
+      "LMS-ready packages (SCORM / xAPI on request)",
+    ],
+    accent: "gold" as const,
+  },
+  {
+    title: "Learning Solutions",
+    href: "/learning-solutions",
+    graphicId: "learning",
+    blurb:
+      "Activity-based training, retreats, facilitation, and custom e-learning.",
+    points: [
+      "Leadership & customer service",
+      "Warehousing & logistics programmes",
+      "E-learning development",
     ],
     accent: "blue" as const,
   },
@@ -54,7 +80,7 @@ const serviceCards: {
     accent: "gold" as const,
   },
   {
-    title: "Application creation",
+    title: "Application Creation",
     href: "/application-creation",
     graphicId: "applications",
     blurb:
@@ -67,20 +93,20 @@ const serviceCards: {
     accent: "green" as const,
   },
   {
-    title: "Learning solutions",
-    href: "/learning-solutions",
-    graphicId: "learning",
+    title: "Website Design",
+    href: "/website-design",
+    graphicId: "website",
     blurb:
-      "Activity-based training, retreats, facilitation, and custom e-learning.",
+      "Next.js, TypeScript, Tailwind CSS, and Cursor AI—planning, build, and launch with your brand.",
     points: [
-      "Leadership & customer service",
-      "Warehousing & logistics programmes",
-      "E-learning development",
+      "Marketing sites and e-commerce-style layouts",
+      "HTTPS, secure hosting, and optional Clerk auth for sign-in / member areas",
+      "This site is our own build (see the Website Design page for our stack)",
     ],
     accent: "blue" as const,
   },
   {
-    title: "Excel training",
+    title: "Excel Training",
     href: "/excel-training",
     graphicId: "excel",
     blurb:
@@ -93,20 +119,7 @@ const serviceCards: {
     accent: "green" as const,
   },
   {
-    title: "Client testimonials",
-    href: "/client-testimonials",
-    graphicId: "testimonials",
-    blurb:
-      "Feedback from health, retail, government, and community clients.",
-    points: [
-      "Training and supervisory programmes",
-      "Strategy days and workshops",
-      "Real quotes and project graphics",
-    ],
-    accent: "gold" as const,
-  },
-  {
-    title: "Digital marketing",
+    title: "Digital Marketing",
     href: "/digital-marketing",
     graphicId: "marketing",
     blurb:
@@ -119,20 +132,7 @@ const serviceCards: {
     accent: "green" as const,
   },
   {
-    title: "Website design",
-    href: "/website-design",
-    graphicId: "website",
-    blurb:
-      "Next.js, TypeScript, Tailwind CSS, and Cursor AI—planning, build, and launch with your brand.",
-    points: [
-      "Marketing sites and e-commerce-style layouts",
-      "HTTPS, secure hosting, and optional Clerk auth for sign-in / member areas",
-      "This site is our own build (see the Website design page for our stack)",
-    ],
-    accent: "blue" as const,
-  },
-  {
-    title: "Payroll processing",
+    title: "Payroll Processing",
     href: "/payroll-processing",
     graphicId: "payroll",
     blurb:

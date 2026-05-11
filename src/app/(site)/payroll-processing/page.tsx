@@ -4,7 +4,7 @@ import { ServicePageShell } from "@/components/ServicePageShell";
 import { smoothPayLogo } from "@/lib/smoothpay-brand";
 
 export const metadata: Metadata = {
-  title: "Payroll processing",
+  title: "Payroll Processing",
   description:
     "SmoothPay payroll processing for Cook Islands businesses — setup, weekly runs, PAYE, CINSF, payslips, and reporting. Easy Digital Solutions.",
 };
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 export default function PayrollProcessingPage() {
   return (
     <ServicePageShell
-      eyebrow="Payroll processing"
-      title="Payroll processing with SmoothPay"
+      eyebrow="Payroll Processing"
+      title="Payroll Processing with SmoothPay"
       titleAside={
         <Image
           src={smoothPayLogo.src}
@@ -33,7 +33,7 @@ export default function PayrollProcessingPage() {
         <strong>SmoothPay</strong>, with hands-on experience supporting
         multi-site operators in the Cook Islands — including ongoing payroll for
         hospitality (20+ staff) and grouped retail and services (around 30
-        staff across fuel, laundry, transport, and related operations).
+        staff).
       </p>
 
       <h2>Getting started</h2>

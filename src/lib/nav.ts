@@ -8,8 +8,18 @@ export const serviceLinks = [
   },
   {
     href: "/dashboards-reporting",
-    label: "Dashboards & reporting",
+    label: "Dashboards & Reporting",
     short: "Dashboards",
+  },
+  {
+    href: "/e-learning",
+    label: "E-Learning",
+    short: "E-Learning",
+  },
+  {
+    href: "/learning-solutions",
+    label: "Learning Solutions",
+    short: "Learning",
   },
   {
     href: "/consulting",
@@ -18,37 +28,27 @@ export const serviceLinks = [
   },
   {
     href: "/application-creation",
-    label: "Application creation",
+    label: "Application Creation",
     short: "Applications",
   },
   {
-    href: "/learning-solutions",
-    label: "Learning solutions",
-    short: "Learning",
-  },
-  {
-    href: "/excel-training",
-    label: "Excel training",
-    short: "Excel",
-  },
-  {
-    href: "/client-testimonials",
-    label: "Client testimonials",
-    short: "Testimonials",
-  },
-  {
-    href: "/digital-marketing",
-    label: "Digital marketing",
-    short: "Marketing",
-  },
-  {
     href: "/website-design",
-    label: "Website design",
+    label: "Website Design",
     short: "Websites",
   },
   {
+    href: "/excel-training",
+    label: "Excel Training",
+    short: "Excel",
+  },
+  {
+    href: "/digital-marketing",
+    label: "Digital Marketing",
+    short: "Marketing",
+  },
+  {
     href: "/payroll-processing",
-    label: "Payroll processing",
+    label: "Payroll Processing",
     short: "Payroll",
   },
 ] as const;
@@ -56,5 +56,6 @@ export const serviceLinks = [
 export const mainNav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/client-testimonials", label: "Testimonials" },
   { href: "/contact", label: "Contact" },
 ] as const;
