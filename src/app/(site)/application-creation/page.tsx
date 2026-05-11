@@ -5,9 +5,10 @@ import { ServicePageShell } from "@/components/ServicePageShell";
 import {
   applicationForm1ExcelVBAImage,
   applicationForm2DataEntryImage,
+  applicationForm3HRRequisitionImage,
+  applicationForm4IslandCraftImage,
   applicationForm5SpeEdiImage,
   applicationForm6DataReportingImage,
-  applicationPageImages,
 } from "@/lib/wix-images";
 
 export const metadata: Metadata = {
@@ -58,14 +59,26 @@ The data is then compiled into a report for your review and analysis.`,
     title: "Application Form_3: HR Form using Excel / VBA",
     body: `The HR form captures employee data in a detailed tabular format, with
 reporting features and a dashboard for easy analysis.`,
-    images: [applicationPageImages[3]],
+    images: [
+      {
+        ...applicationForm3HRRequisitionImage,
+        figureClassName: "max-w-5xl",
+        sizes: "(max-width: 1024px) 100vw, min(896px, 100vw)",
+      },
+    ],
   },
   {
     title: "Application Form_4: Client | Product | Payments",
     body: `These are advanced applications with multiple tables, enhanced by
 sophisticated VBA coding for added functionality, event log management,
 and integrated dashboards.`,
-    images: [applicationPageImages[5]],
+    images: [
+      {
+        ...applicationForm4IslandCraftImage,
+        figureClassName: "max-w-5xl",
+        sizes: "(max-width: 1024px) 100vw, min(1024px, 100vw)",
+      },
+    ],
   },
   {
     title: "Application Form_5: Customs Automated SpeEdi System",

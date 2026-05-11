@@ -4,24 +4,30 @@
  */
 
 /**
- * Dashboards & reporting — KPI_1 baseball, KPI_2 resort analysis, KPI_3 HR (US industry).
- * Wix CDN (add files under /public/dashboards/ and switch src if you want local-only).
+ * Dashboards & reporting — KPI_1 baseball player performance, KPI_2 resort overbooking
+ * analysis, KPI_3 wages and employment by US industry. Local high-resolution PNGs.
  */
 export const dashboardsImages = [
   {
-    src: "https://static.wixstatic.com/media/be63cf_ae49ade7cdd6482e83438ae976771be2~mv2.png/v1/fill/w_980,h_499,al_c,lg_1,q_90,enc_avif,quality_auto/image001.png",
-    alt: "KPI Dashboard 1 — baseball player performance (Adam Lind), stats table and charts",
+    src: "/dashboards/kpi-dashboard-1.png",
+    alt: "KPI Dashboard 1 — baseball player performance (Alex Gordon), stats table and trend charts.",
     caption: "KPI Dashboard_1",
+    width: 2400,
+    height: 1186,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_4cea448969d147b1882d73ef96d3bb93~mv2.png/v1/fill/w_720,h_394,al_c,lg_1,q_85,enc_avif,quality_auto/be63cf_4cea448969d147b1882d73ef96d3bb93~mv2.png",
-    alt: "KPI Dashboard 2 — resort reservations analysis, cancellations, revenue and recommendations",
+    src: "/dashboards/kpi-dashboard-2.png",
+    alt: "KPI Dashboard 2 — resort reservations analysis, cancellation rates, revenue impact and recommendations.",
     caption: "KPI Dashboard_2",
+    width: 2400,
+    height: 1270,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_19c7337c3cff42fe829ea1113647c8c2~mv2.png/v1/fill/w_718,h_385,al_c,lg_1,q_85,enc_avif,quality_auto/be63cf_19c7337c3cff42fe829ea1113647c8c2~mv2.png",
-    alt: "KPI Dashboard 3 — wages and employment by US industry, maps and donut chart",
+    src: "/dashboards/kpi-dashboard-3.png",
+    alt: "KPI Dashboard 3 — wages and employment by US industry, with map, donut and trend charts.",
     caption: "KPI Dashboard_3",
+    width: 2400,
+    height: 1032,
   },
 ] as const;
 
@@ -66,8 +72,24 @@ export const applicationForm2DataEntryImage = {
 export const applicationForm6DataReportingImage = {
   src: "/applications/application-form-6-data-reporting.png",
   alt: "TURAMA GROUP REPORTING ANALYSIS SYSTEM — filters, slicers, and report actions (SQL, Power Query, Power Pivot, Excel / VBA).",
-  width: 969,
-  height: 481,
+  width: 2400,
+  height: 1181,
+} as const;
+
+/** Application Form 3 — HR Requisition Form (Excel / VBA). */
+export const applicationForm3HRRequisitionImage = {
+  src: "/applications/application-form-3-hr-requisition.png",
+  alt: "HR Requisition Form — Excel / VBA: entry date, position, division, justification, and reference / record actions.",
+  width: 1600,
+  height: 1107,
+} as const;
+
+/** Application Form 4 — Island Craft Customer Query and Job Management System. */
+export const applicationForm4IslandCraftImage = {
+  src: "/applications/application-form-4-island-craft.png",
+  alt: "Island Craft Customer Query and Job Management form — customer query, item query, payments, artwork and JMS controls.",
+  width: 2400,
+  height: 1092,
 } as const;
 
 /** Application creation — application-creator page graphics */
