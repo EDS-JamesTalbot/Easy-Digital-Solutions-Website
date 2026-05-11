@@ -52,13 +52,13 @@ export default function AboutPage() {
         <h2 id="team-heading" className="sr-only">
           Our team
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="flex min-h-[12rem] items-center justify-center bg-white px-6 py-10 md:min-h-[14rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2">
+          <div className="flex min-h-[12rem] items-center justify-center bg-white px-6 py-10 md:col-start-1 md:row-start-1 md:min-h-[14rem]">
             <p className="font-display text-2xl font-bold text-eds-green sm:text-3xl">
               James Talbot
             </p>
           </div>
-          <div className="bg-eds-green px-6 py-8 text-eds-blue-soft md:min-h-[14rem] [&_li]:!text-eds-blue-soft">
+          <div className="bg-eds-green px-6 py-8 text-eds-blue-soft md:col-start-2 md:row-start-1 md:min-h-[14rem] [&_li]:!text-eds-blue-soft">
             <ul className="space-y-3 text-sm leading-relaxed sm:text-base">
               <li>
                 James brings over 40 years of experience in logistics, retail
@@ -87,7 +87,12 @@ export default function AboutPage() {
               </li>
             </ul>
           </div>
-          <div className="bg-eds-green px-6 py-8 text-eds-blue-soft md:min-h-[14rem] [&_li]:!text-eds-blue-soft">
+          <div className="flex min-h-[12rem] items-center justify-center bg-white px-6 py-10 md:col-start-2 md:row-start-2 md:min-h-[14rem]">
+            <p className="font-display text-2xl font-bold text-eds-green sm:text-3xl">
+              Mereani Talbot
+            </p>
+          </div>
+          <div className="bg-eds-green px-6 py-8 text-eds-blue-soft md:col-start-1 md:row-start-2 md:min-h-[14rem] [&_li]:!text-eds-blue-soft">
             <ul className="space-y-3 text-sm leading-relaxed sm:text-base">
               <li>
                 With over 20 years&apos; experience in IT software and
@@ -123,11 +128,6 @@ export default function AboutPage() {
                 setup via third-party services.
               </li>
             </ul>
-          </div>
-          <div className="flex min-h-[12rem] items-center justify-center bg-white px-6 py-10 md:min-h-[14rem]">
-            <p className="font-display text-2xl font-bold text-eds-green sm:text-3xl">
-              Mereani Talbot
-            </p>
           </div>
         </div>
       </section>

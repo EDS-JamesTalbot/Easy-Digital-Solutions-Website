@@ -187,23 +187,38 @@ export function SiteHeader() {
             >
               Home
             </Link>
-            <p className="px-3 pt-2 text-xs font-semibold uppercase tracking-wide text-eds-muted">
+            <p
+              id="mobile-nav-services-heading"
+              className="border-b border-eds-charcoal/10 px-3 pb-2 pt-4 font-display text-sm font-bold uppercase tracking-[0.12em] text-eds-charcoal"
+            >
               Services
             </p>
-            {serviceLinks.map((s) => (
-              <Link
-                key={s.href}
-                href={s.href}
-                className={`rounded-lg px-3 py-2.5 text-base ${
-                  pathname === s.href
-                    ? "bg-eds-green/10 font-semibold text-eds-green"
-                    : "font-medium text-eds-charcoal hover:bg-eds-blue-soft"
-                }`}
-                onClick={() => setMobileOpen(false)}
-              >
-                {s.label}
-              </Link>
-            ))}
+            <ul
+              className="mb-4 mt-2 space-y-0.5 rounded-r-lg bg-eds-blue-soft/35 py-2 pl-1 pr-2"
+              role="list"
+              aria-labelledby="mobile-nav-services-heading"
+            >
+              {serviceLinks.map((s) => (
+                <li key={s.href} className="list-none">
+                  <Link
+                    href={s.href}
+                    className={`flex gap-3 rounded-md py-2 pl-6 pr-2 text-[0.9375rem] leading-snug transition ${
+                      pathname === s.href
+                        ? "bg-eds-green/15 font-semibold text-eds-green"
+                        : "font-medium text-eds-charcoal hover:bg-white/70"
+                    }`}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    <span
+                      className="mt-[0.55em] h-2 w-2 shrink-0 rounded-full bg-eds-green"
+                      aria-hidden
+                    />
+                    <span>{s.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="mx-3 mb-2 border-t border-eds-charcoal/15" role="presentation" />
             {mainNav
               .filter((n) => n.href !== "/")
               .map((item) => (

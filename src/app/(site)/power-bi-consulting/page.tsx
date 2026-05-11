@@ -81,9 +81,9 @@ export default function PowerBiConsultingPage() {
         The following example uses a fictitious marketing company,{" "}
         <strong>Market Mindz</strong>, to show how Power BI can bring marketing
         and sales data to life. The suite of dashboards covers{" "}
-        <strong>individual campaign insights</strong>,{" "}
-        <strong>buyer composition and profile</strong>, and{" "}
-        <strong>purchasing drivers</strong>—so teams can see what is working,
+        <strong>Individual Campaign Insights</strong>,{" "}
+        <strong>Buyer Composition and Profile</strong>, and{" "}
+        <strong>Purchasing Drivers</strong>—so teams can see what is working,
         who they are reaching, and what behaviours lift results.
       </p>
 
@@ -98,7 +98,7 @@ export default function PowerBiConsultingPage() {
           channel investment.
         </p>
         <DashboardSectionFigure
-          label="Campaign performance — Market Mindz (sample)"
+          label="Campaign Performance — Market Mindz (sample)"
           src={img1.src}
           alt={img1.alt}
         />
@@ -115,7 +115,7 @@ export default function PowerBiConsultingPage() {
           messaging with confidence.
         </p>
         <DashboardSectionFigure
-          label="Buyer composition — Market Mindz (sample)"
+          label="Buyer Composition — Market Mindz (sample)"
           src={img2.src}
           alt={img2.alt}
         />
@@ -132,7 +132,7 @@ export default function PowerBiConsultingPage() {
           are easy to explain to stakeholders.
         </p>
         <DashboardSectionFigure
-          label="Purchasing drivers — Market Mindz (sample)"
+          label="Purchasing Drivers — Market Mindz (sample)"
           src={img3.src}
           alt={img3.alt}
         />
@@ -149,8 +149,8 @@ export default function PowerBiConsultingPage() {
           Mobile layout — published to Power BI Service
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-eds-charcoal sm:text-base">
-          The three captures below are the{" "}
-          <strong>mobile view</strong> of the same Market Mindz report, in
+          The three screenshots below are the{" "}
+          <strong>Mobile View</strong> of the same Market Mindz report, in
           sequence: <strong>Campaign</strong>, <strong>Buyer</strong>, and{" "}
           <strong>Drivers</strong>. They illustrate how the experience looks once
           the report is <strong>published to Power BI Service</strong> and opened
@@ -179,7 +179,7 @@ export default function PowerBiConsultingPage() {
               <figcaption className="mt-3 font-display text-sm font-semibold text-eds-green">
                 {item.title}
                 <span className="mt-1 block font-sans text-xs font-normal text-eds-charcoal/80">
-                  Mobile layout · Power BI Service (published)
+                  Mobile Layout · Power BI Service (published)
                 </span>
               </figcaption>
             </figure>
@@ -189,8 +189,12 @@ export default function PowerBiConsultingPage() {
 
       <div className="mt-14 border-t border-eds-charcoal/10 pt-10 text-center sm:mt-16 sm:pt-12">
         <p className="text-base font-medium text-eds-charcoal">
-          Want a similar setup for your data model, branding, and publishing
-          workflow? We can help with design, DAX, and rollout.
+          Thinking about Dashboards like these for your own organisation? We
+          can help bring your underlying data together so it stays dependable,
+          tailor the visuals to match your branding and audiences, tighten the
+          summaries and key numbers behind each chart, and see you through to
+          shared
+          live reporting your teams trust.
         </p>
         <Link
           href="/contact"
