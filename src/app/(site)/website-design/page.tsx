@@ -7,7 +7,7 @@ import { websiteDesignExampleImage } from "@/lib/wix-images";
 export const metadata: Metadata = {
   title: "Website Design",
   description:
-    "Secure Next.js sites—HTTPS, modern hosting, and optional Clerk auth for sign-in and protected areas — Easy Digital Solutions, Cook Islands.",
+    "Fast, secure websites for Cook Islands businesses—clear design, safe hosting, and optional log-in areas when you need them. Easy Digital Solutions.",
 };
 
 export default function WebsiteDesignPage() {
@@ -24,52 +24,52 @@ export default function WebsiteDesignPage() {
       </p>
       <p>
         The site you&apos;re browsing now—Easy Digital Solutions&apos; own
-        marketing site—was designed and developed in-house. We build with{" "}
-        <strong>Next.js</strong> (React, App Router),{" "}
-        <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>, so pages
-        are fast, responsive, and
-        straightforward to extend. Day-to-day development runs in{" "}
-        <strong>Cursor AI</strong>, an AI-assisted editor that speeds up
-        delivery while we stay focused on structure, accessibility, and
-        performance. That same stack and workflow is what we bring to client
-        sites: clear information design, solid engineering, and a look that
-        matches your brand.
+        marketing site—was designed and built in-house. We use modern tools so
+        pages load quickly, look good on phones and desktops, and are easy to
+        update as your business grows. We also use smart editing software that
+        helps us work efficiently, while we still pay close attention to clear
+        layout, ease of use for visitors, and overall speed. That same approach
+        is what we bring to your site: information that&apos;s easy to find, a
+        site that behaves reliably, and visuals that match your brand.
       </p>
       <p>
-        Whether you need a brochure-style presence, a booking flow, or a
-        full online shop with products and cart, we can plan the information
-        architecture, implement the UI, and help you keep content up to date.
-        If you already work with us on training, consulting, or applications,
-        your website can sit alongside those services as a consistent digital
-        front door.
+        Whether you need a simple &quot;who we are and how to reach us&quot;
+        site, a way for people to book appointments, or a fuller online store
+        with products and a shopping cart, we can plan the structure, build the
+        pages, and show you how to keep wording and images fresh. If you already
+        work with us on training, consulting, or custom tools, your website can
+        sit alongside those services as one clear front door for customers and
+        partners.
       </p>
 
-      <h2>Security and authentication</h2>
+      <h2>Security and sign-in</h2>
       <p>
-        Every site should be served over <strong>HTTPS</strong>
+        Every site should use a <strong>secure connection</strong>
         {" "}
-        with modern TLS, hosted on infrastructure that keeps patches and certificates
-        current. In Next.js we follow secure defaults—sane routing, careful
-        handling of environment variables, and server-side work where it belongs
-        so sensitive logic isn&apos;t exposed in the browser.
+        (the padlock in the browser) and live on hosting that stays up to date. We follow
+        sensible practices—clear page structure, careful handling of private
+        settings, and keeping sensitive work where it belongs so it isn&apos;t
+        left out in the open where it shouldn&apos;t be.
       </p>
       <p>
-        When a project needs <strong>sign-in</strong>, member areas, or
-        role-based access, we integrate established authentication platforms
-        rather than inventing fragile password systems. For example,{" "}
-        <strong>Clerk</strong> (and similar providers) can handle user
-        accounts, social logins, session management, and multi-factor
-        authentication—so your users get a smooth experience and you get
-        security maintained by specialists. We wire those services into your
-        Next.js app and tailor what each role can see and do.
+        When you need <strong>log-in areas</strong>, member-only pages, or
+        different access levels for staff versus the public, we hook into
+        trusted sign-in services instead of home-grown password systems that
+        are hard to keep safe. For example, <strong>Clerk</strong>
+        {" "}
+        (and similar providers) can look after accounts, &quot;sign in with Google&quot;
+        style options, staying signed in safely, and extra security steps like
+        two-step verification—so visitors get a smooth experience and the heavy
+        lifting on security is handled by people who do it full time. We connect that to
+        your site and set who can see what.
       </p>
 
-      <h2>Example: e-commerce shop layout</h2>
+      <h2>Example: online shop layout</h2>
       <p>
-        Below is a screenshot from another site we built: an E-Commerce shop experience with product grid, filters, cart, and
-        navigation. It illustrates the kind of clean, product-led layout we can
-        deliver when you want customers to browse, compare, and purchase
-        online.
+        Below is a screenshot from another site we built: an online shop with a
+        product grid, filters, cart, and navigation. It shows the kind of
+        clear, product-first layout we can deliver when you want customers to
+        browse, compare, and buy online.
       </p>
 
       <figure className="mx-auto mt-8 w-full max-w-5xl">
@@ -85,8 +85,7 @@ export default function WebsiteDesignPage() {
           />
         </div>
         <figcaption className="mt-3 text-center text-sm text-eds-muted">
-          Example shop page—product cards, filters, and cart (Easy Digital
-          Solutions).
+          Example shop page—products, filters, and cart (Easy Digital Solutions).
         </figcaption>
       </figure>
 
@@ -98,8 +97,8 @@ export default function WebsiteDesignPage() {
         >
           Contact us
         </Link>{" "}
-        with your goals and we&apos;ll outline options that fit your budget and
-        timeline.
+        with what you want to achieve and we&apos;ll suggest options that suit
+        your budget and timeline.
       </p>
     </ServicePageShell>
   );

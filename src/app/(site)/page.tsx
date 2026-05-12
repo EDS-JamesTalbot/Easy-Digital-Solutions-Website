@@ -243,14 +243,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {serviceCards.map((s) => (
               <article
                 key={s.title}
-                className={`relative isolate flex flex-col overflow-hidden rounded-2xl border border-eds-charcoal/10 bg-white p-6 shadow-sm ring-1 ${accentRing(s.accent)} transition hover:-translate-y-0.5 hover:shadow-md`}
+                className={`relative isolate flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-eds-charcoal/10 bg-white p-6 shadow-sm ring-1 ${accentRing(s.accent)} transition hover:-translate-y-0.5 hover:shadow-md`}
               >
                 <ServiceTileBackground id={s.graphicId} accent={s.accent} />
-                <div className="relative z-10 flex flex-col [&_h3,&_p,&_ul]:[text-shadow:0_0_14px_rgba(255,255,255,0.9)]">
+                <div className="relative z-10 flex h-full min-h-0 flex-col [&_h3,&_p,&_ul]:[text-shadow:0_0_14px_rgba(255,255,255,0.9)]">
                   <div className="flex items-center gap-2">
                     <span
                       className={`h-2.5 w-2.5 shrink-0 rounded-full ${accentDot(s.accent)}`}
