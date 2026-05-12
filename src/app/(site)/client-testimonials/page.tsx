@@ -20,7 +20,7 @@ const highlights = [
   "Island Craft: May to Dec 2024",
   "Prime Foods: 6 Pillars of Customer Services – March to May 2024",
   "NES Strategy Day: October 2023",
-  "Government Dept: October 2023",
+  "Development Coordination Division: October 2023",
   "CIPS: All Staff Training – June to July 2023",
   "Prime Foods: Effective Supervisory Management – May to July 2023",
   "Raromart: 2020",

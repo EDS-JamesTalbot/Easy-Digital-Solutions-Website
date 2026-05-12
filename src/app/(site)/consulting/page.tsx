@@ -9,19 +9,21 @@ export const metadata: Metadata = {
 };
 
 const clients = [
-  "Business Trade & Investment Board",
-  "Cook Islands Investment Corporation — Asset Management",
-  "Cook Islands Investment Corporation — Asset Development",
-  "Cook Islands Parliamentary Services",
-  "Turama House Ltd",
-  "OTB Restaurant / Te Puka Estate",
-  "TOA Petroleum",
-  "Te Marae Ora — Ministry of Health",
-  "Honest SkinCare",
+  "Ezebuild Construction",
+  "OTB Manuia Beach",
+  "Honest Skin Care International Ltd",
+  "Turama House",
+  "Porter Group/Apex Holdings",
+  "Ministry of Health",
+  "CITC",
+  "Island Craft",
   "Prime Foods",
-  "Vonnia's",
-  "Cook Islands Trade Corporation",
+  "National Environment Service",
+  "Development Coordination Division",
+  "CIPS",
   "Raromart",
+  "The Bond Store",
+  "Vonnias",
 ] as const;
 
 export default function ConsultingPage() {

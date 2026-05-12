@@ -5,7 +5,7 @@ import { ServicePageShell } from "@/components/ServicePageShell";
 export const metadata: Metadata = {
   title: "Learning Solutions",
   description:
-    "Activity-based training, retreats, facilitation, and custom e-learning — Easy Digital Solutions.",
+    "Activity-based training, retreats, and facilitation — Easy Digital Solutions.",
 };
 
 const programmes = [
@@ -32,6 +32,8 @@ const retreatClients = [
   "Cook Islands Investment Corporation",
   "Turama House",
   "Prime Foods",
+  "National Environment Service",
+  "CIPS",
 ] as const;
 
 export default function LearningSolutionsPage() {
@@ -48,9 +50,8 @@ export default function LearningSolutionsPage() {
         approach is centred on activity-based learning, moving away from
         traditional lecture-style sessions to get people thinking, doing, and
         collaborating. Through real-world problem-solving, small group
-        discussions, role plays, simulations, and custom e-learning modules, we
-        create experiences that help learners connect the dots and apply their
-        knowledge immediately.
+        discussions, role plays, and simulations, we create experiences that help
+        learners connect the dots and apply their knowledge immediately.
       </p>
       <p>
         This approach works across all types of teams — from technical crews to
@@ -60,9 +61,8 @@ export default function LearningSolutionsPage() {
       </p>
       <p>
         Our clients often say the training is not only informative but also
-        memorable and impactful. Whether delivered face-to-face or through
-        tailored e-learning solutions, we design programs that empower teams and
-        deliver real results.
+        memorable and impactful. Whether delivered face-to-face or as facilitated
+        workshops, we design programs that empower teams and deliver real results.
       </p>
       <p>
         If you&apos;re looking for learning that engages your team and drives
@@ -125,27 +125,6 @@ export default function LearningSolutionsPage() {
         and meaningful change.
       </p>
 
-      <h2>E-learning development & customisation</h2>
-      <p>
-        E-learning is a new and exciting service area for us, and one we&apos;ve
-        genuinely loved developing. We&apos;ve invested significant time
-        learning new software and tools to support our clients, and it&apos;s
-        been incredibly rewarding to see courses come to life from concept to
-        delivery.
-      </p>
-      <p>
-        We create custom e-learning solutions, supporting everything from
-        storyboarding and content design through to animation videos, interactive
-        modules, and quizzes. Our content is tailored to suit different
-        audiences, whether for staff induction, skills development, or technical
-        training.
-      </p>
-      <p>
-        We focus on making learning clear, engaging, and practical, ensuring it
-        aligns with your objectives and integrates smoothly with your LMS. This
-        is a service we are confident in delivering and excited to continue
-        growing, combining creativity, technology, and real-world learning needs.
-      </p>
       <p>
         For more information on any of the training programs mentioned above,
         contact us today. We will schedule a time to meet with you to get a

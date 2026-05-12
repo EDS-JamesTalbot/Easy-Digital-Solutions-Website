@@ -58,11 +58,11 @@ const serviceCards: {
     href: "/learning-solutions",
     graphicId: "learning",
     blurb:
-      "Activity-based training, retreats, facilitation, and custom e-learning.",
+      "Activity-based training, retreats, and facilitation for teams and leaders.",
     points: [
       "Leadership & customer service",
       "Warehousing & logistics programmes",
-      "E-learning development",
+      "Retreats & team development",
     ],
     accent: "blue" as const,
   },
