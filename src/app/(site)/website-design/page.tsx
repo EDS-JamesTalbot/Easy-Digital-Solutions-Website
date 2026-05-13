@@ -72,7 +72,7 @@ export default function WebsiteDesignPage() {
         browse, compare, and buy online.
       </p>
 
-      <figure className="mx-auto mt-8 w-full max-w-5xl">
+      <figure className="mx-auto mt-8 w-full">
         <div className="overflow-hidden rounded-xl border border-eds-charcoal/10 bg-eds-blue-soft/20 shadow-md">
           <Image
             src={src}

@@ -25,7 +25,7 @@ export function WixImageGallery({
 
   return (
     <div
-      className={`mx-auto w-full max-w-5xl ${grid} ${className}`.trim()}
+      className={`mx-auto w-full max-w-6xl ${grid} ${className}`.trim()}
       role="list"
     >
       {items.map((img) => (

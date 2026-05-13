@@ -42,8 +42,8 @@ export function ServicePageShell({
     "scroll-mt-[var(--header-scroll-offset)] font-display text-3xl font-bold tracking-tight text-eds-green sm:text-4xl";
 
   const innerShellClass = compactMobile
-    ? "mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-14 lg:px-8"
-    : "mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8";
+    ? "mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-14 lg:px-8"
+    : "mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8";
 
   const proseClass = compactMobile
     ? "mt-5 space-y-4 text-base leading-relaxed sm:mt-8 sm:space-y-6 [&_p]:text-eds-charcoal [&_h2]:mt-6 [&_h2]:font-display [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-eds-charcoal sm:[&_h2]:mt-10 [&_h3]:mt-5 [&_h3]:font-display [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-eds-charcoal sm:[&_h3]:mt-8 [&_li]:text-eds-charcoal [&_ul]:my-3 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5 [&_ul]:text-eds-charcoal sm:[&_ul]:my-4 [&_p_a]:font-semibold [&_p_a]:text-eds-green [&_p_a]:underline-offset-4 hover:[&_p_a]:underline [&_li_a]:font-semibold [&_li_a]:text-eds-green [&_li_a]:underline-offset-4 hover:[&_li_a]:underline"

@@ -24,7 +24,7 @@ export function DashboardSectionFigure({
             width={1200}
             height={800}
             className="h-auto max-h-[min(72vh,560px)] w-full object-contain"
-            sizes="(max-width: 896px) 100vw, 896px"
+            sizes="(max-width: 1152px) 100vw, 1152px"
           />
         </div>
       </figure>
