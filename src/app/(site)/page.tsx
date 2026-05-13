@@ -251,7 +251,7 @@ export default function Home() {
               >
                 <ServiceTileBackground id={s.graphicId} accent={s.accent} />
                 <div className="relative z-10 flex h-full min-h-0 flex-col [&_h3,&_p,&_ul]:[text-shadow:0_0_14px_rgba(255,255,255,0.9)]">
-                  <div className="flex items-center gap-2">
+                  <div className="flex min-h-[3rem] shrink-0 items-center gap-2 sm:min-h-[3.25rem]">
                     <span
                       className={`h-2.5 w-2.5 shrink-0 rounded-full ${accentDot(s.accent)}`}
                       aria-hidden
@@ -260,10 +260,13 @@ export default function Home() {
                       {s.title}
                     </h3>
                   </div>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-eds-muted">
-                    {s.blurb}
-                  </p>
-                  <ul className="mt-5 space-y-2 border-t border-eds-charcoal/10 pt-5 text-sm text-eds-charcoal/90">
+                  {/* Min height tracks longest blurb (Power BI ~4 lines, 2-col); keep rule aligned across cards */}
+                  <div className="mt-2 min-h-[5.125rem] shrink-0 sm:min-h-[5.625rem]">
+                    <p className="text-sm leading-relaxed text-eds-muted">
+                      {s.blurb}
+                    </p>
+                  </div>
+                  <ul className="mt-1 shrink-0 space-y-2 border-t border-eds-charcoal/10 pt-2 text-sm text-eds-charcoal/90">
                     {s.points.map((p) => (
                       <li key={p} className="flex gap-2">
                         <span className="text-eds-blue" aria-hidden>
@@ -273,12 +276,14 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href={s.href}
-                    className="mt-4 inline-flex text-sm font-semibold text-eds-green hover:underline"
-                  >
-                    Learn more
-                  </Link>
+                  <div className="mt-auto pt-4">
+                    <Link
+                      href={s.href}
+                      className="inline-flex text-sm font-semibold text-eds-green hover:underline"
+                    >
+                      Learn more
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))}
