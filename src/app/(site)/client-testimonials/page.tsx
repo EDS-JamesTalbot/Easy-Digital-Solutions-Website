@@ -79,7 +79,6 @@ const porterGroupLogos = [
 export default function ClientTestimonialsPage() {
   return (
     <ServicePageShell
-      eyebrow="Social proof"
       title="Client testimonials"
       ctaLabel="Start a conversation"
     >
