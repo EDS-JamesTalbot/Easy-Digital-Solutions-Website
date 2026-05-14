@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { DashboardSectionFigure } from "@/components/DashboardSectionFigure";
+import { PageEndCta } from "@/components/PageEndCta";
+import { PortfolioSection } from "@/components/PortfolioSection";
 import { ServicePageShell } from "@/components/ServicePageShell";
-import { edsPrimaryButtonClass } from "@/lib/eds-button";
 import { dashboardsImages } from "@/lib/wix-images";
 
 export const metadata: Metadata = {
@@ -29,75 +29,50 @@ export default function DashboardsReportingPage() {
         you full confidence to manage, monitor, and make sense of your data.
       </p>
 
-      <section className="mt-7 sm:mt-16">
-        <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
-          Dashboard Reporting
-        </h2>
-        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
-          Dashboard reporting presents key information clearly and
-          efficiently—often on a single, easy-to-read page—saving your team
-          valuable time. The example shown here is an interactive dashboard
-          displaying individual baseball player performance over time, with
-          dynamic stats and graphs that update automatically. This is just one
-          example of what we can create. Dashboards can be fully customised to
-          suit your business needs, whether you want to track financial
-          performance, sales data, inventory levels, or other key
-          metrics—all in one place.
-        </p>
+      <PortfolioSection
+        title="Dashboard Reporting"
+        intro="Dashboard reporting presents key information clearly and efficiently—often on a single, easy-to-read page—saving your team valuable time. The example shown here is an interactive dashboard displaying individual baseball player performance over time, with dynamic stats and graphs that update automatically. This is just one example of what we can create. Dashboards can be fully customised to suit your business needs, whether you want to track financial performance, sales data, inventory levels, or other key metrics—all in one place."
+      >
         <DashboardSectionFigure
           label="KPI Dashboard_1"
           src={kpi1.src}
           alt={kpi1.alt}
+          width={kpi1.width}
+          height={kpi1.height}
         />
-      </section>
+      </PortfolioSection>
 
-      <section className="mt-8 border-t border-eds-charcoal/10 pt-7 sm:mt-16 sm:pt-16">
-        <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
-          Dashboard Reporting — Analysis
-        </h2>
-        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
-          The following dashboard is where all the analysis is done for the end
-          user. Key messaging using color codes with summarized analysis and
-          recommendations.
-        </p>
+      <PortfolioSection
+        divided
+        title="Dashboard Reporting — Analysis"
+        intro="The following dashboard is where all the analysis is done for the end user. Key messaging using color codes with summarized analysis and recommendations."
+      >
         <DashboardSectionFigure
           label="KPI Dashboard_2"
           src={kpi2.src}
           alt={kpi2.alt}
+          width={kpi2.width}
+          height={kpi2.height}
         />
-      </section>
+      </PortfolioSection>
 
-      <section className="mt-8 border-t border-eds-charcoal/10 pt-7 sm:mt-16 sm:pt-16">
-        <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
-          Dashboard Reporting — HR | KPI&apos;s
-        </h2>
-        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
-          HR managers need fast, clear access to critical KPIs all in one place.
-          Below sample dashboard highlights wage and employee trends alongside
-          average annual wages. Additional metrics can be easily added, such as
-          employee breakdowns by role, division, or location, as well as key
-          ratios like gender distribution and training data—giving HR teams a
-          comprehensive, real-time view of their workforce.
-        </p>
+      <PortfolioSection
+        divided
+        title="Dashboard Reporting — HR | KPI's"
+        intro="HR managers need fast, clear access to critical KPIs all in one place. Below sample dashboard highlights wage and employee trends alongside average annual wages. Additional metrics can be easily added, such as employee breakdowns by role, division, or location, as well as key ratios like gender distribution and training data—giving HR teams a comprehensive, real-time view of their workforce."
+      >
         <DashboardSectionFigure
           label="KPI Dashboard_3"
           src={kpi3.src}
           alt={kpi3.alt}
+          width={kpi3.width}
+          height={kpi3.height}
         />
-      </section>
+      </PortfolioSection>
 
-      <div className="mt-8 border-t border-eds-charcoal/10 pt-7 text-center sm:mt-16 sm:pt-12">
-        <p className="text-base font-medium text-eds-charcoal">
-          Contact us for more information and to discuss your specific
-          requirements.
-        </p>
-        <Link
-          href="/contact"
-          className={`${edsPrimaryButtonClass} mt-4 uppercase tracking-wide sm:mt-6`}
-        >
-          Request a demo
-        </Link>
-      </div>
+      <PageEndCta label="Request a demo">
+        Contact us for more information and to discuss your specific requirements.
+      </PageEndCta>
     </ServicePageShell>
   );
 }

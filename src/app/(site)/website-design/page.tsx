@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { EdsTextLink } from "@/components/EdsTextLink";
 import { ServicePageShell } from "@/components/ServicePageShell";
 import { websiteDesignExampleImage } from "@/lib/wix-images";
 
@@ -91,12 +91,7 @@ export default function WebsiteDesignPage() {
 
       <p className="!mt-10">
         Ready to refresh an old site or launch something new?{" "}
-        <Link
-          href="/contact"
-          className="font-semibold text-eds-green underline-offset-4 hover:underline"
-        >
-          Contact us
-        </Link>{" "}
+        <EdsTextLink href="/contact">Contact us</EdsTextLink>{" "}
         with what you want to achieve and we&apos;ll suggest options that suit
         your budget and timeline.
       </p>

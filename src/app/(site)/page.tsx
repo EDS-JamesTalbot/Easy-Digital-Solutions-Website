@@ -2,149 +2,10 @@ import Link from "next/link";
 import { WaveDivider } from "@/components/WaveDivider";
 import {
   ServiceTileBackground,
-  type ServiceTileGraphicId,
 } from "@/components/ServiceTileGraphic";
+import { EdsTextLink } from "@/components/EdsTextLink";
 import { edsPrimaryButtonClass } from "@/lib/eds-button";
-
-const serviceCards: {
-  title: string;
-  href: string;
-  blurb: string;
-  points: readonly string[];
-  accent: "green" | "blue" | "gold";
-  graphicId: ServiceTileGraphicId;
-}[] = [
-  {
-    title: "Power BI Consulting",
-    href: "/power-bi-consulting",
-    graphicId: "powerBi",
-    blurb:
-      "See how the business is really performing—from headline metrics for your Board and CEO to the operational detail your Managers need—with dashboards that stay current on desktop, online, and mobile.",
-    points: [
-      "One trusted view of the numbers—fewer competing spreadsheets to reconcile",
-      "Publish online with automatic refresh so invited people always see up-to-date results",
-      "Executive summaries and manager-ready detail, still readable on a phone",
-    ],
-    accent: "blue" as const,
-  },
-  {
-    title: "Dashboards & Reporting",
-    href: "/dashboards-reporting",
-    graphicId: "dashboards",
-    blurb:
-      "Excel-based dashboards and reporting—clear visuals and recurring numbers your team can refresh and own.",
-    points: [
-      "Tables, pivots, charts, and slicers for at-a-glance KPIs",
-      "Power Query and structured imports for repeatable refresh",
-      "Management-ready layouts for operations, finance, and HR views",
-    ],
-    accent: "blue" as const,
-  },
-  {
-    title: "E-Learning",
-    href: "/e-learning",
-    graphicId: "eLearning",
-    blurb:
-      "Custom e-learning modules, animated explainers, interactive lessons, and quizzes — designed for staff induction, skills development, and technical training.",
-    points: [
-      "Storyboarding and content design",
-      "Animation videos and interactive modules",
-      "LMS-ready packages (SCORM / xAPI on request)",
-    ],
-    accent: "gold" as const,
-  },
-  {
-    title: "Learning Solutions",
-    href: "/learning-solutions",
-    graphicId: "learning",
-    blurb:
-      "Activity-based training, retreats, and facilitation for teams and leaders.",
-    points: [
-      "Leadership & customer service",
-      "Warehousing & logistics programmes",
-      "Retreats & team development",
-    ],
-    accent: "blue" as const,
-  },
-  {
-    title: "Consulting",
-    href: "/consulting",
-    graphicId: "consulting",
-    blurb:
-      "Process improvement, project management, data analysis, and HR support.",
-    points: [
-      "Spreadsheets, WMS, procurement",
-      "Government & private sector experience",
-      "Trusted client references",
-    ],
-    accent: "gold" as const,
-  },
-  {
-    title: "Application Creation",
-    href: "/application-creation",
-    graphicId: "applications",
-    blurb:
-      "Digital forms, automation, helpdesk, inventory, and custom Excel/VBA/Python tools.",
-    points: [
-      "CRM, HR, and inventory systems",
-      "Purchase order automation",
-      "Customs and SpeEdi workflows",
-    ],
-    accent: "green" as const,
-  },
-  {
-    title: "Website Design",
-    href: "/website-design",
-    graphicId: "website",
-    blurb:
-      "Next.js, TypeScript, Tailwind CSS, and Cursor AI—planning, build, and launch with your brand.",
-    points: [
-      "Marketing sites and e-commerce-style layouts",
-      "HTTPS, secure hosting, and optional Clerk auth for sign-in / member areas",
-      "This site is our own build (see the Website Design page for our stack)",
-    ],
-    accent: "blue" as const,
-  },
-  {
-    title: "Excel Training",
-    href: "/excel-training",
-    graphicId: "excel",
-    blurb:
-      "One-on-one and group Excel training—with a Microsoft Excel Expert.",
-    points: [
-      "Basics through Power Query & VBA",
-      "Dashboards and real workplace examples",
-      "Flexible in-person or online sessions",
-    ],
-    accent: "green" as const,
-  },
-  {
-    title: "Digital Marketing",
-    href: "/digital-marketing",
-    graphicId: "marketing",
-    blurb:
-      "Social media, content, strategy, and performance monitoring.",
-    points: [
-      "Facebook start-up and social content",
-      "Marketing strategy",
-      "Engagement and reporting",
-    ],
-    accent: "green" as const,
-  },
-  {
-    title: "Payroll Processing",
-    href: "/payroll-processing",
-    graphicId: "payroll",
-    blurb:
-      "SmoothPay payroll for Cook Islands businesses — weekly runs, PAYE, CINSF, payslips, and reporting.",
-    points: [
-      "System Setup, employee records, and business settings & configuration",
-      "Payroll processing — email payslips and payroll reporting for business",
-      "Standard reporting, ad hoc requests, and monthly accountant liaison",
-    ],
-    accent: "gold" as const,
-  },
-];
+import { homeServiceCards } from "@/lib/service-cards";
 
 function accentRing(accent: "green" | "blue" | "gold") {
   if (accent === "green") return "ring-eds-green/20 bg-eds-green/5";
@@ -215,12 +76,7 @@ export default function Home() {
           <p className="mt-6 text-lg leading-relaxed text-eds-muted">
             Learn more about our team and how we support local businesses on
             our{" "}
-            <Link
-              href="/about"
-              className="font-semibold text-eds-green underline-offset-4 hover:underline"
-            >
-              About us
-            </Link>{" "}
+            <EdsTextLink href="/about">About us</EdsTextLink>{" "}
             page.
           </p>
         </div>
@@ -244,7 +100,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {serviceCards.map((s) => (
+            {homeServiceCards.map((s) => (
               <article
                 key={s.title}
                 className={`relative isolate flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-eds-charcoal/10 bg-white p-6 shadow-sm ring-1 ${accentRing(s.accent)} transition hover:-translate-y-0.5 hover:shadow-md`}

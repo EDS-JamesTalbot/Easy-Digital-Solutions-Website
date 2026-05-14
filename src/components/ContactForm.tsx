@@ -2,17 +2,78 @@
 
 import { useState } from "react";
 
+const fields = [
+  {
+    id: "contact-name",
+    name: "name",
+    type: "text",
+    autoComplete: "name",
+    placeholder: "YOUR NAME",
+    label: "Your name",
+    required: false,
+    multiline: false,
+  },
+  {
+    id: "contact-email",
+    name: "email",
+    type: "email",
+    autoComplete: "email",
+    placeholder: "Email",
+    label: "Email",
+    required: true,
+    multiline: false,
+  },
+  {
+    id: "contact-mobile",
+    name: "mobile",
+    type: "tel",
+    autoComplete: "tel",
+    placeholder: "MOBILE",
+    label: "Mobile",
+    required: false,
+    multiline: false,
+  },
+  {
+    id: "contact-company",
+    name: "company",
+    type: "text",
+    autoComplete: "organization",
+    placeholder: "Company",
+    label: "Company",
+    required: false,
+    multiline: false,
+  },
+  {
+    id: "contact-message",
+    name: "message",
+    type: "text",
+    autoComplete: "off",
+    placeholder: "MESSAGE HERE:",
+    label: "Message",
+    required: false,
+    multiline: true,
+  },
+] as const;
+
 export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   const [company, setCompany] = useState("");
   const [message, setMessage] = useState("");
+
+  const values = { name, email, mobile, company, message };
+  const setters = {
+    name: setName,
+    email: setEmail,
+    mobile: setMobile,
+    company: setCompany,
+    message: setMessage,
+  };
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Website enquiry from ${name || "visitor"}`
-    );
+    const subject = encodeURIComponent(`Website enquiry from ${name || "visitor"}`);
     const body = encodeURIComponent(
       [
         `YOUR NAME: ${name}`,
@@ -22,7 +83,7 @@ export function ContactForm() {
         "",
         "MESSAGE:",
         message,
-      ].join("\n")
+      ].join("\n"),
     );
     window.location.href = `mailto:eds.raro@gmail.com?subject=${subject}&body=${body}`;
   }
@@ -34,85 +95,36 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <p className="text-sm text-eds-charcoal">Send us your details.</p>
 
-      <div>
-        <label htmlFor="contact-name" className="sr-only">
-          Your name
-        </label>
-        <input
-          id="contact-name"
-          name="name"
-          type="text"
-          autoComplete="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="YOUR NAME"
-          className={fieldClass}
-        />
-      </div>
-
-      <div>
-        <label htmlFor="contact-email" className="sr-only">
-          Email
-        </label>
-        <input
-          id="contact-email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          className={fieldClass}
-        />
-      </div>
-
-      <div>
-        <label htmlFor="contact-mobile" className="sr-only">
-          Mobile
-        </label>
-        <input
-          id="contact-mobile"
-          name="mobile"
-          type="tel"
-          autoComplete="tel"
-          value={mobile}
-          onChange={(e) => setMobile(e.target.value)}
-          placeholder="MOBILE"
-          className={fieldClass}
-        />
-      </div>
-
-      <div>
-        <label htmlFor="contact-company" className="sr-only">
-          Company
-        </label>
-        <input
-          id="contact-company"
-          name="company"
-          type="text"
-          autoComplete="organization"
-          value={company}
-          onChange={(e) => setCompany(e.target.value)}
-          placeholder="Company"
-          className={fieldClass}
-        />
-      </div>
-
-      <div>
-        <label htmlFor="contact-message" className="sr-only">
-          Message
-        </label>
-        <textarea
-          id="contact-message"
-          name="message"
-          rows={6}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="MESSAGE HERE:"
-          className={`${fieldClass} resize-y min-h-[140px]`}
-        />
-      </div>
+      {fields.map((field) => (
+        <div key={field.id}>
+          <label htmlFor={field.id} className="sr-only">
+            {field.label}
+          </label>
+          {field.multiline ? (
+            <textarea
+              id={field.id}
+              name={field.name}
+              rows={6}
+              value={values[field.name]}
+              onChange={(e) => setters[field.name](e.target.value)}
+              placeholder={field.placeholder}
+              className={`${fieldClass} resize-y min-h-[140px]`}
+            />
+          ) : (
+            <input
+              id={field.id}
+              name={field.name}
+              type={field.type}
+              autoComplete={field.autoComplete}
+              required={field.required}
+              value={values[field.name]}
+              onChange={(e) => setters[field.name](e.target.value)}
+              placeholder={field.placeholder}
+              className={fieldClass}
+            />
+          )}
+        </div>
+      ))}
 
       <div className="flex justify-end pt-2">
         <button

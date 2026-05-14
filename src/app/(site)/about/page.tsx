@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { EdsTextLink } from "@/components/EdsTextLink";
 import { ServicePageShell } from "@/components/ServicePageShell";
+import { TeamMemberPanel } from "@/components/TeamMemberPanel";
 import { edsPrimaryButtonClass } from "@/lib/eds-button";
 
 export const metadata: Metadata = {
@@ -14,16 +15,15 @@ export default function AboutPage() {
   return (
     <ServicePageShell title="Behind Easy Digital Solutions" showFooterCta={false}>
       <p>
-        At the heart of our work, we are a team driven by a shared passion
-        for helping local businesses thrive. Since 2023, we&apos;ve supported
-        the business community with over 30 years of combined experience in
+        At the heart of our work, we are a team driven by a shared passion for
+        helping local businesses thrive. Since 2023, we&apos;ve supported the
+        business community with over 30 years of combined experience in
         technology, training, and strategy.
       </p>
       <p>
         We believe in delivering practical, creative solutions—custom-fit for
-        your goals. Whether you&apos;re looking to grow, streamline, or
-        adapt, we bring fresh ideas and a collaborative mindset to every
-        project.
+        your goals. Whether you&apos;re looking to grow, streamline, or adapt,
+        we bring fresh ideas and a collaborative mindset to every project.
       </p>
       <div>
         <p className="font-semibold text-eds-charcoal">Our approach is simple:</p>
@@ -37,12 +37,11 @@ export default function AboutPage() {
         </ul>
       </div>
       <p>
-        Confidentiality is a non-negotiable. We take your trust seriously,
-        and every engagement starts with a mutual non-disclosure agreement
-        to protect your ideas and ensure peace of mind. We&apos;re proud of
-        our reputation in the business community, and we&apos;re always happy
-        to share{" "}
-        <Link href="/client-testimonials">client testimonials</Link>{" "}
+        Confidentiality is a non-negotiable. We take your trust seriously, and
+        every engagement starts with a mutual non-disclosure agreement to protect
+        your ideas and ensure peace of mind. We&apos;re proud of our reputation
+        in the business community, and we&apos;re always happy to share{" "}
+        <EdsTextLink href="/client-testimonials">client testimonials</EdsTextLink>{" "}
         and references. We&apos;d love the opportunity to support your next step.
       </p>
 
@@ -54,96 +53,85 @@ export default function AboutPage() {
           Our team
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="flex flex-col items-center justify-center gap-4 bg-white px-6 py-10 md:col-start-1 md:row-start-1">
-            <Image
-              src="/about/james-talbot.png"
-              alt="Portrait of James Talbot"
-              width={192}
-              height={192}
-              className="h-40 w-40 rounded-full border-4 border-eds-green/20 object-cover object-top shadow-sm sm:h-48 sm:w-48"
-            />
-            <p className="font-display text-2xl font-bold text-eds-green sm:text-3xl">
-              James Talbot
-            </p>
-          </div>
-          <div className="bg-eds-green px-6 py-8 text-eds-blue-soft md:col-start-2 md:row-start-1 [&_li]:!text-eds-blue-soft">
-            <ul className="space-y-3 text-sm leading-relaxed sm:text-base">
-              <li>
-                James brings over 40 years of experience in logistics, retail
-                operations, warehousing, and transport. He holds globally
-                recognised certifications, including PMP® (ID# 8105874) and
-                Microsoft Excel Expert (ID# 993652768), showcasing his
-                strengths in project leadership, data analysis, and process
-                automation.
-              </li>
-              <li>
-                Highly technical, James works with Visual Basic, Python, Power
-                BI, Power Query, Power Pivot, and advanced Excel dashboards,
-                creating custom tools that improve efficiency and user
-                experience.
-              </li>
-              <li>
-                He has written ISO-standard procedures across Health &amp;
-                Safety, HR, and operations, and has led large-scale teams of
-                150+ staff with P&amp;L responsibility up to $20M.
-              </li>
-              <li>
-                James has also overseen the rollout of major systems such as
-                WMS, EDI, and POS, with a strong focus on optimising workflows,
-                improving warehouse performance, and integrating best-practice
-                operational standards.
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-4 bg-white px-6 py-10 md:col-start-2 md:row-start-2">
-            <Image
-              src="/about/mereani-talbot.png"
-              alt="Portrait of Mereani Talbot"
-              width={192}
-              height={192}
-              className="h-40 w-40 rounded-full border-4 border-eds-green/20 object-cover object-top shadow-sm sm:h-48 sm:w-48"
-            />
-            <p className="font-display text-2xl font-bold text-eds-green sm:text-3xl">
-              Mereani Talbot
-            </p>
-          </div>
-          <div className="bg-eds-green px-6 py-8 text-eds-blue-soft md:col-start-1 md:row-start-2 [&_li]:!text-eds-blue-soft">
-            <ul className="space-y-3 text-sm leading-relaxed sm:text-base">
-              <li>
-                With over 20 years&apos; experience in IT software and
-                hardware sales, Mereani Talbot brings expertise in channel
-                management, business development, social media, marketing, and
-                content creation across New Zealand, Australia, and the Cook
-                Islands.
-              </li>
-              <li>
-                An experienced facilitator and trainer, she designs engaging,
-                activity-based learning programmes, develops induction
-                frameworks, and supports HR processes. She also leads team
-                retreats and strategy workshops to help organisations reconnect
-                and align.
-              </li>
-              <li>
-                Over the past six years, Mereani has consulted for government
-                and private sector clients in the Cook Islands, contributing to
-                strategic planning, sponsorship and media management,
-                marketing, and project delivery.
-              </li>
-              <li>
-                She holds an NZQA 4098 Tutor Assessment qualification and a
-                Degree in Applied Management (2021), with proficiency across
-                tools including WordPress (Elementor), Asana, Trello,
-                LucidPress, MailerLite, Photoshop, InDesign, Zoho, and CRM
-                systems.
-              </li>
-              <li>
-                With a strong foundation in technology, sales, and modern
-                marketing, Mereani brings practical, creative, and up-to-date
-                solutions, including website content creation and e-commerce
-                setup via third-party services.
-              </li>
-            </ul>
-          </div>
+          <TeamMemberPanel
+            name="James Talbot"
+            portraitSrc="/about/james-talbot.png"
+            portraitAlt="Portrait of James Talbot"
+            portraitClassName="md:col-start-1 md:row-start-1"
+            bioClassName="md:col-start-2 md:row-start-1"
+            bio={
+              <ul className="space-y-3 text-sm leading-relaxed sm:text-base">
+                <li>
+                  James brings over 40 years of experience in logistics, retail
+                  operations, warehousing, and transport. He holds globally
+                  recognised certifications, including PMP® (ID# 8105874) and
+                  Microsoft Excel Expert (ID# 993652768), showcasing his
+                  strengths in project leadership, data analysis, and process
+                  automation.
+                </li>
+                <li>
+                  Highly technical, James works with Visual Basic, Python, Power
+                  BI, Power Query, Power Pivot, and advanced Excel dashboards,
+                  creating custom tools that improve efficiency and user
+                  experience.
+                </li>
+                <li>
+                  He has written ISO-standard procedures across Health &amp;
+                  Safety, HR, and operations, and has led large-scale teams of
+                  150+ staff with P&amp;L responsibility up to $20M.
+                </li>
+                <li>
+                  James has also overseen the rollout of major systems such as
+                  WMS, EDI, and POS, with a strong focus on optimising workflows,
+                  improving warehouse performance, and integrating best-practice
+                  operational standards.
+                </li>
+              </ul>
+            }
+          />
+          <TeamMemberPanel
+            name="Mereani Talbot"
+            portraitSrc="/about/mereani-talbot.png"
+            portraitAlt="Portrait of Mereani Talbot"
+            portraitClassName="md:col-start-2 md:row-start-2"
+            bioClassName="md:col-start-1 md:row-start-2"
+            bio={
+              <ul className="space-y-3 text-sm leading-relaxed sm:text-base">
+                <li>
+                  With over 20 years&apos; experience in IT software and hardware
+                  sales, Mereani Talbot brings expertise in channel management,
+                  business development, social media, marketing, and content
+                  creation across New Zealand, Australia, and the Cook Islands.
+                </li>
+                <li>
+                  An experienced facilitator and trainer, she designs engaging,
+                  activity-based learning programmes, develops induction
+                  frameworks, and supports HR processes. She also leads team
+                  retreats and strategy workshops to help organisations reconnect
+                  and align.
+                </li>
+                <li>
+                  Over the past six years, Mereani has consulted for government
+                  and private sector clients in the Cook Islands, contributing to
+                  strategic planning, sponsorship and media management,
+                  marketing, and project delivery.
+                </li>
+                <li>
+                  She holds an NZQA 4098 Tutor Assessment qualification and a
+                  Degree in Applied Management (2021), with proficiency across
+                  tools including WordPress (Elementor), Asana, Trello,
+                  LucidPress, MailerLite, Photoshop, InDesign, Zoho, and CRM
+                  systems.
+                </li>
+                <li>
+                  With a strong foundation in technology, sales, and modern
+                  marketing, Mereani brings practical, creative, and up-to-date
+                  solutions, including website content creation and e-commerce
+                  setup via third-party services.
+                </li>
+              </ul>
+            }
+          />
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import { ContentFigure } from "@/components/ContentFigure";
+import { EdsTextLink } from "@/components/EdsTextLink";
 import { ServicePageShell } from "@/components/ServicePageShell";
 import {
   applicationForm1ExcelVBAImage,
@@ -204,51 +204,11 @@ export default function ApplicationCreationPage() {
             </h3>
             <p>{ex.body}</p>
             {ex.images.length > 0 ? (
-            <div className="space-y-4 sm:space-y-6">
-              {ex.images.map((img, i) => {
-                const isLocal = img.src.startsWith("/");
-                const w = img.width ?? 900;
-                const h = img.height ?? 500;
-                return (
-                  <figure
-                    key={`${ex.title}-${img.src}-${i}`}
-                    className={`mx-auto w-full ${img.figureClassName ?? "max-w-3xl"}`}
-                  >
-                    <div className="rounded-lg border border-eds-charcoal/10 bg-eds-blue-soft/20 shadow-md">
-                      <Image
-                        src={img.src}
-                        alt={img.alt}
-                        width={w}
-                        height={h}
-                        className={
-                          isLocal
-                            ? "mx-auto block h-auto max-h-none rounded-[inherit]"
-                            : "mx-auto block h-auto w-full max-w-none object-contain object-top"
-                        }
-                        style={
-                          isLocal
-                            ? {
-                                maxWidth: img.width
-                                  ? `min(100%, ${img.width}px)`
-                                  : "min(100%, 100vw)",
-                                width: "auto",
-                                height: "auto",
-                              }
-                            : undefined
-                        }
-                        sizes={
-                          img.sizes ??
-                          (isLocal
-                            ? "(max-width: 768px) 100vw, 768px"
-                            : "(max-width: 896px) 100vw, 896px")
-                        }
-                        quality={isLocal ? 88 : 100}
-                      />
-                    </div>
-                  </figure>
-                );
-              })}
-            </div>
+              <div className="space-y-4 sm:space-y-6">
+                {ex.images.map((img, i) => (
+                  <ContentFigure key={`${ex.title}-${img.src}-${i}`} {...img} />
+                ))}
+              </div>
             ) : null}
           </article>
         ))}
@@ -259,12 +219,7 @@ export default function ApplicationCreationPage() {
       </p>
       <p>
         For Excel training related to these tools, see{" "}
-        <Link
-          href="/excel-training"
-          className="font-semibold text-eds-green underline-offset-4 hover:underline"
-        >
-          Excel training services
-        </Link>
+        <EdsTextLink href="/excel-training">Excel training services</EdsTextLink>
         .
       </p>
     </ServicePageShell>

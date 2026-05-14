@@ -16,6 +16,9 @@
   --eds-teal-label: #0d9488;
   --eds-terracotta: #b85c3c;
   --eds-terracotta-dark: #9a4a31;
+  --eds-honest: #8fb88a;
+  --eds-bci-teal: #0097a7;
+  --eds-bci-gold: #ffcc00;
 }
 
 @theme inline {
@@ -32,6 +35,9 @@
   --color-eds-teal-label: var(--eds-teal-label);
   --color-eds-terracotta: var(--eds-terracotta);
   --color-eds-terracotta-dark: var(--eds-terracotta-dark);
+  --color-eds-honest: var(--eds-honest);
+  --color-eds-bci-teal: var(--eds-bci-teal);
+  --color-eds-bci-gold: var(--eds-bci-gold);
   --font-sans: var(--font-dm-sans);
   --font-display: var(--font-plus-jakarta);
 }

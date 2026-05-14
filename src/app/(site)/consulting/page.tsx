@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { EdsTextLink } from "@/components/EdsTextLink";
 import { ServicePageShell } from "@/components/ServicePageShell";
+import { consultingClients } from "@/lib/clients";
 
 export const metadata: Metadata = {
   title: "Consulting",
@@ -8,23 +9,7 @@ export const metadata: Metadata = {
     "Business process improvement, project management, data analysis, and HR support — Easy Digital Solutions.",
 };
 
-const clients = [
-  "Ezebuild Construction",
-  "OTB Manuia Beach",
-  "Honest Skin Care International Ltd",
-  "Turama House",
-  "Porter Group/Apex Holdings",
-  "Ministry of Health",
-  "CITC",
-  "Island Craft",
-  "Prime Foods",
-  "National Environment Service",
-  "Development Coordination Division",
-  "CIPS",
-  "Raromart",
-  "The Bond Store",
-  "Vonnias",
-] as const;
+const clients = consultingClients;
 
 export default function ConsultingPage() {
   return (
@@ -54,9 +39,7 @@ export default function ConsultingPage() {
 
       <p>
         See our{" "}
-        <Link href="/client-testimonials" className="font-semibold text-eds-green underline-offset-4 hover:underline">
-          client testimonials
-        </Link>{" "}
+        <EdsTextLink href="/client-testimonials">client testimonials</EdsTextLink>{" "}
         or get in touch to discuss your next project.
       </p>
     </ServicePageShell>

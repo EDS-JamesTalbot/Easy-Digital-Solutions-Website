@@ -4,12 +4,16 @@ type DashboardSectionFigureProps = {
   label: string;
   src: string;
   alt: string;
+  width?: number;
+  height?: number;
 };
 
 export function DashboardSectionFigure({
   label,
   src,
   alt,
+  width = 1200,
+  height = 800,
 }: DashboardSectionFigureProps) {
   return (
     <div className="mt-4 sm:mt-6">
@@ -21,8 +25,8 @@ export function DashboardSectionFigure({
           <Image
             src={src}
             alt={alt}
-            width={1200}
-            height={800}
+            width={width}
+            height={height}
             className="h-auto max-h-[min(72vh,560px)] w-full object-contain"
             sizes="(max-width: 1152px) 100vw, 1152px"
           />

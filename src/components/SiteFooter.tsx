@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { serviceLinks } from "@/lib/nav";
+import { SITE_BUILD_YEAR } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -58,8 +59,7 @@ export function SiteFooter() {
         </div>
 
         <p className="mt-10 border-t border-white/10 pt-8 text-center text-xs text-white/55">
-          © {new Date().getFullYear()} Easy Digital Solutions. All rights
-          reserved.
+          © {SITE_BUILD_YEAR} Easy Digital Solutions. All rights reserved.
         </p>
       </div>
     </footer>

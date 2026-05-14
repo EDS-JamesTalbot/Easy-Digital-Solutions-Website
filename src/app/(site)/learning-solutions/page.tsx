@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { EdsTextLink } from "@/components/EdsTextLink";
 import { ServicePageShell } from "@/components/ServicePageShell";
 
 export const metadata: Metadata = {
@@ -77,19 +77,9 @@ export default function LearningSolutionsPage() {
       </ul>
 
       <p>
-        <Link
-          href="/client-testimonials"
-          className="font-semibold text-eds-green underline-offset-4 hover:underline"
-        >
-          Client testimonials
-        </Link>
+        <EdsTextLink href="/client-testimonials">Client testimonials</EdsTextLink>
         {" · "}
-        <Link
-          href="/excel-training"
-          className="font-semibold text-eds-green underline-offset-4 hover:underline"
-        >
-          Excel training
-        </Link>
+        <EdsTextLink href="/excel-training">Excel training</EdsTextLink>
       </p>
 
       <h2>Retreats & facilitation services</h2>

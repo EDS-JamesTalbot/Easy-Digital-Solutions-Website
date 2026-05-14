@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { EdsTextLink } from "@/components/EdsTextLink";
 import { ServicePageShell } from "@/components/ServicePageShell";
 import { WixImageGallery } from "@/components/WixImageGallery";
 import { digitalMarketingImages } from "@/lib/wix-images";
@@ -48,19 +48,8 @@ export default function DigitalMarketingPage() {
 
       <p>
         Pair digital marketing with our{" "}
-        <Link
-          href="/learning-solutions"
-          className="font-semibold text-eds-green underline-offset-4 hover:underline"
-        >
-          learning solutions
-        </Link>{" "}
-        or{" "}
-        <Link
-          href="/consulting"
-          className="font-semibold text-eds-green underline-offset-4 hover:underline"
-        >
-          consulting
-        </Link>{" "}
+        <EdsTextLink href="/learning-solutions">learning solutions</EdsTextLink>{" "}
+        or <EdsTextLink href="/consulting">consulting</EdsTextLink>{" "}
         when you need campaigns plus capability building in-house.
       </p>
     </ServicePageShell>

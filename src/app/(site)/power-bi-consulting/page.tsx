@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { DashboardSectionFigure } from "@/components/DashboardSectionFigure";
+import { PageEndCta } from "@/components/PageEndCta";
+import { PortfolioSection } from "@/components/PortfolioSection";
 import { ServicePageShell } from "@/components/ServicePageShell";
-import { edsPrimaryButtonClass } from "@/lib/eds-button";
 
 export const metadata: Metadata = {
   title: "Power BI Consulting",
@@ -88,56 +88,40 @@ export default function PowerBiConsultingPage() {
         who they are reaching, and what behaviours lift results.
       </p>
 
-      <section className="mt-7 sm:mt-16">
-        <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
-          1. Campaign insights
-        </h2>
-        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
-          Campaign performance compares attributed purchases and sales revenue
-          across campaigns, product mix by campaign, channel mix, and where
-          buyers spend the most—ideal for prioritising creative, offers, and
-          channel investment.
-        </p>
+      <PortfolioSection
+        title="1. Campaign insights"
+        intro="Campaign performance compares attributed purchases and sales revenue across campaigns, product mix by campaign, channel mix, and where buyers spend the most—ideal for prioritising creative, offers, and channel investment."
+      >
         <DashboardSectionFigure
           label="Campaign Performance — Market Mindz (sample)"
           src={img1.src}
           alt={img1.alt}
         />
-      </section>
+      </PortfolioSection>
 
-      <section className="mt-8 border-t border-eds-charcoal/10 pt-7 sm:mt-16 sm:pt-16">
-        <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
-          2. Buyer composition and profile
-        </h2>
-        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
-          Buyer composition summarises who is in the base: age, income,
-          education, household structure, engagement signals, and how category
-          preferences shift with age—helping marketers tailor segments and
-          messaging with confidence.
-        </p>
+      <PortfolioSection
+        divided
+        title="2. Buyer composition and profile"
+        intro="Buyer composition summarises who is in the base: age, income, education, household structure, engagement signals, and how category preferences shift with age—helping marketers tailor segments and messaging with confidence."
+      >
         <DashboardSectionFigure
           label="Buyer Composition — Market Mindz (sample)"
           src={img2.src}
           alt={img2.alt}
         />
-      </section>
+      </PortfolioSection>
 
-      <section className="mt-8 border-t border-eds-charcoal/10 pt-7 sm:mt-16 sm:pt-16">
-        <h2 className="font-display text-xl font-bold text-eds-charcoal sm:text-2xl">
-          3. Purchasing drivers
-        </h2>
-        <p className="mt-3 text-base leading-relaxed text-eds-charcoal sm:mt-4">
-          Purchasing drivers uses Power BI&apos;s Key Influencers analysis to
-          highlight factors that increase the likelihood of accepting a campaign
-          or lifting average sales—paired with supporting visuals so insights
-          are easy to explain to stakeholders.
-        </p>
+      <PortfolioSection
+        divided
+        title="3. Purchasing drivers"
+        intro="Purchasing drivers uses Power BI's Key Influencers analysis to highlight factors that increase the likelihood of accepting a campaign or lifting average sales—paired with supporting visuals so insights are easy to explain to stakeholders."
+      >
         <DashboardSectionFigure
           label="Purchasing Drivers — Market Mindz (sample)"
           src={img3.src}
           alt={img3.alt}
         />
-      </section>
+      </PortfolioSection>
 
       <section
         className="mt-8 rounded-2xl border border-eds-charcoal/10 bg-eds-blue-soft/25 p-4 sm:mt-16 sm:p-6"
@@ -188,22 +172,13 @@ export default function PowerBiConsultingPage() {
         </div>
       </section>
 
-      <div className="mt-8 border-t border-eds-charcoal/10 pt-7 text-center sm:mt-16 sm:pt-12">
-        <p className="text-base font-medium text-eds-charcoal">
-          Thinking about Dashboards like these for your own organisation? We
-          can help bring your underlying data together so it stays dependable,
-          tailor the visuals to match your branding and audiences, tighten the
-          summaries and key numbers behind each chart, and see you through to
-          shared
-          live reporting your teams trust.
-        </p>
-        <Link
-          href="/contact"
-          className={`${edsPrimaryButtonClass} mt-4 uppercase tracking-wide sm:mt-6`}
-        >
-          Discuss Power BI
-        </Link>
-      </div>
+      <PageEndCta label="Discuss Power BI">
+        Thinking about Dashboards like these for your own organisation? We can
+        help bring your underlying data together so it stays dependable, tailor
+        the visuals to match your branding and audiences, tighten the summaries
+        and key numbers behind each chart, and see you through to shared live
+        reporting your teams trust.
+      </PageEndCta>
     </ServicePageShell>
   );
 }

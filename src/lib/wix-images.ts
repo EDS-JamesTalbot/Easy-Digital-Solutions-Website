@@ -1,12 +1,7 @@
 /**
- * Image URLs from the original Wix site (static.wixstatic.com).
- * Used with next/image — see next.config.ts remotePatterns.
+ * Site image metadata for galleries and service pages.
  */
 
-/**
- * Dashboards & reporting — KPI_1 baseball player performance, KPI_2 resort overbooking
- * analysis, KPI_3 wages and employment by US industry. Local high-resolution PNGs.
- */
 export const dashboardsImages = [
   {
     src: "/dashboards/kpi-dashboard-1.png",
@@ -31,10 +26,6 @@ export const dashboardsImages = [
   },
 ] as const;
 
-export const consultingHeroImage =
-  "https://static.wixstatic.com/media/be63cf_1ea68c9d56fc44eebb66c8e5bb0a0b54~mv2.png/v1/fill/w_420,h_440,al_c,lg_1,q_85,enc_avif,quality_auto/consulting.png" as const;
-
-/** Website design — example e-commerce shop layout (local asset). */
 export const websiteDesignExampleImage = {
   src: "/services/website-design-shop-example.png",
   alt: "E-commerce shop page — product grid, header navigation, cart, pagination, and footer (example site by Easy Digital Solutions).",
@@ -42,17 +33,6 @@ export const websiteDesignExampleImage = {
   height: 3782,
 } as const;
 
-export const homeServiceImages = {
-  forms: "https://static.wixstatic.com/media/be63cf_1eb3310aafab4f9ca572501663e2c379~mv2.jpg/v1/crop/x_155,y_0,w_353,h_362/fill/w_406,h_418,al_c,lg_1,q_80,enc_avif,quality_auto/forms.jpg",
-  website12:
-    "https://static.wixstatic.com/media/be63cf_07a7e4ef526e4762a9a8aa2bb46d73f9~mv2.png/v1/fill/w_427,h_388,al_c,lg_1,q_85,enc_avif,quality_auto/website12.png",
-  consulting:
-    "https://static.wixstatic.com/media/be63cf_1ea68c9d56fc44eebb66c8e5bb0a0b54~mv2.png/v1/fill/w_420,h_440,al_c,lg_1,q_85,enc_avif,quality_auto/consulting.png",
-  training:
-    "https://static.wixstatic.com/media/be63cf_3343baf4df234b0daef3a5d31c39197a~mv2.png/v1/fill/w_385,h_403,al_c,lg_1,q_85,enc_avif,quality_auto/training.png",
-} as const;
-
-/** Application Form 1 — Call Centre Form and Call Log Call Stats (Excel / VBA, single composite). */
 export const applicationForm1ExcelVBAImage = {
   src: "/applications/application-form-1-excel-vba.png",
   alt: "Call Centre Form and Call Log Call Stats — Excel / VBA data entry and reporting (single screenshot).",
@@ -60,7 +40,6 @@ export const applicationForm1ExcelVBAImage = {
   height: 552,
 } as const;
 
-/** Application Form 2 — CRM DATA ENTRY FORM (Python / Excel). */
 export const applicationForm2DataEntryImage = {
   src: "/applications/application-form-2-data-entry.png",
   alt: "DATA ENTRY FORM — CRM customer information and feedback (Python / Excel).",
@@ -68,15 +47,6 @@ export const applicationForm2DataEntryImage = {
   height: 383,
 } as const;
 
-/** Application Form 6 — Data reporting (Turama Group reporting analysis system). */
-export const applicationForm6DataReportingImage = {
-  src: "/applications/application-form-6-data-reporting.png",
-  alt: "TURAMA GROUP REPORTING ANALYSIS SYSTEM — filters, slicers, and report actions (SQL, Power Query, Power Pivot, Excel / VBA).",
-  width: 2400,
-  height: 1181,
-} as const;
-
-/** Application Form 3 — HR Requisition Form (Excel / VBA). */
 export const applicationForm3HRRequisitionImage = {
   src: "/applications/application-form-3-hr-requisition.png",
   alt: "HR Requisition Form — Excel / VBA: entry date, position, division, justification, and reference / record actions.",
@@ -84,7 +54,6 @@ export const applicationForm3HRRequisitionImage = {
   height: 1107,
 } as const;
 
-/** Application Form 4 — Island Craft Customer Query and Job Management System. */
 export const applicationForm4IslandCraftImage = {
   src: "/applications/application-form-4-island-craft.png",
   alt: "Island Craft Customer Query and Job Management form — customer query, item query, payments, artwork and JMS controls.",
@@ -92,119 +61,109 @@ export const applicationForm4IslandCraftImage = {
   height: 1092,
 } as const;
 
-/** Application creation — application-creator page graphics */
-export const applicationPageImages = [
-  {
-    src: "https://static.wixstatic.com/media/be63cf_1a975bb9cdf7404da048a519ef0df5e2~mv2.png/v1/fill/w_712,h_341,al_c,lg_1,q_85,enc_avif,quality_auto/be63cf_1a975bb9cdf7404da048a519ef0df5e2~mv2.png",
-    alt: "Application form sample — data entry interface",
-    caption: "Application sample",
-  },
-  {
-    src: "https://static.wixstatic.com/media/be63cf_2827acac7a244e8e8082e00658c1acf1~mv2.png/v1/fill/w_717,h_509,al_c,lg_1,q_90,enc_avif,quality_auto/be63cf_2827acac7a244e8e8082e00658c1acf1~mv2.png",
-    alt: "Business application workflow screenshot",
-    caption: "Workflow & forms",
-  },
-  {
-    src: "https://static.wixstatic.com/media/be63cf_2b3e0492f50a44da87ac9e21b811af3e~mv2.png/v1/fill/w_720,h_320,al_c,lg_1,q_85,enc_avif,quality_auto/be63cf_2b3e0492f50a44da87ac9e21b811af3e~mv2.png",
-    alt: "Digital form and reporting example",
-    caption: "Digital forms",
-  },
-  {
-    src: "https://static.wixstatic.com/media/be63cf_6f8c6c05b74743f1ac114d4734c18d1a~mv2.png/v1/fill/w_716,h_485,al_c,lg_1,q_85,enc_avif,quality_auto/HR%20System.png",
-    alt: "HR system application interface",
-    caption: "HR system",
-  },
-  {
-    src: "https://static.wixstatic.com/media/be63cf_93bc7fb263a2409ebc987bf73adb5929~mv2.png/v1/fill/w_624,h_332,al_c,lg_1,q_85,enc_avif,quality_auto/Turama%20Group.png",
-    alt: "Turama Group application example",
-    caption: "Turama Group",
-  },
-  {
-    src: "https://static.wixstatic.com/media/be63cf_a1ab72f9fa09480ea5fdbca45ba432b2~mv2.png/v1/fill/w_720,h_325,al_c,lg_1,q_85,enc_avif,quality_auto/be63cf_a1ab72f9fa09480ea5fdbca45ba432b2~mv2.png",
-    alt: "Custom business application dashboard",
-    caption: "Custom application",
-  },
-  {
-    src: "https://static.wixstatic.com/media/be63cf_eaed0929fe1848c98a479dc4f56977d8~mv2.png/v1/fill/w_1349,h_591,al_c,q_90,enc_avif,quality_auto/image%20(3).png",
-    alt: "Wide application overview graphic",
-    caption: "End-to-end solution overview",
-  },
-] as const;
-
-/** Application Form 5 — Customs Automated SpeEdi System (wide high-res gallery asset). */
 export const applicationForm5SpeEdiImage = {
-  src: applicationPageImages[6].src,
+  src: "/applications/application-form-5-speedi.png",
   alt: "Customs Automated SpeEdi System — vessel selection, freight cargo lists, and PO conversion workflow.",
+  width: 1349,
+  height: 591,
 } as const;
 
-/** Excel training — excel page */
+export const applicationForm6DataReportingImage = {
+  src: "/applications/application-form-6-data-reporting.png",
+  alt: "TURAMA GROUP REPORTING ANALYSIS SYSTEM — filters, slicers, and report actions (SQL, Power Query, Power Pivot, Excel / VBA).",
+  width: 2400,
+  height: 1181,
+} as const;
+
 export const excelImages = [
   {
-    src: "https://static.wixstatic.com/media/11062b_d482f7fb62b04ae5a56d4235b94dac77~mv2.jpeg/v1/fill/w_800,h_533,al_c,q_85,enc_avif,quality_auto/11062b_d482f7fb62b04ae5a56d4235b94dac77~mv2.jpeg",
+    src: "/excel/excel-workplace.jpeg",
     alt: "Excel training and business consultation",
     caption: "Excel in the workplace",
+    width: 800,
+    height: 533,
   },
   {
-    src: "https://static.wixstatic.com/media/11062b_29153d68327e443b889640e85310e7ee~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,enc_avif,quality_auto/11062b_29153d68327e443b889640e85310e7ee~mv2.jpg",
+    src: "/excel/excel-training-session.jpg",
     alt: "Microsoft Excel training session",
     caption: "Hands-on Excel training",
-  },
-] as const;
-
-/** Client testimonials — training-testimonials page */
-export const testimonialImages = [
-  {
-    src: "https://static.wixstatic.com/media/be63cf_e4aada3b1a0f4257b5ce3dd66a638acc~mv2.png/v1/crop/x_0,y_0,w_644,h_96/fill/w_887,h_134,al_c,lg_1,q_85,enc_avif,quality_auto/testimonials_PNG.png",
-    alt: "Client testimonials banner",
-    caption: "Testimonials",
+    width: 980,
+    height: 653,
   },
 ] as const;
 
 export const testimonialPageGallery = [
   {
-    src: "https://static.wixstatic.com/media/be63cf_7ca150dbaf2f4538b30a32c2395d5956~mv2.jpg/v1/fill/w_1286,h_633,al_c,q_85,enc_avif,quality_auto/Testimonial.jpg",
+    id: "client-feedback",
+    src: "/testimonials/gallery/client-feedback.jpg",
     alt: "Client testimonial graphic",
     caption: "Client feedback",
+    width: 1286,
+    height: 633,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_7f88f28fd0c345d4a3992bb9903c2e58~mv2.png/v1/fill/w_705,h_675,al_c,q_90,enc_avif,quality_auto/Screenshot%202025-05-13%20192633.png",
+    id: "project-testimonial",
+    src: "/testimonials/gallery/project-testimonial.png",
     alt: "Testimonial screenshot",
     caption: "Project testimonial",
+    width: 705,
+    height: 675,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_806b67f6e49147a8b0dc2fa42fa7721c~mv2.jpg/v1/fill/w_1253,h_440,al_c,q_85,enc_avif,quality_auto/islandcraft.jpg",
+    id: "island-craft",
+    src: "/testimonials/gallery/island-craft.jpg",
     alt: "Island Craft testimonial",
     caption: "Island Craft",
+    width: 1253,
+    height: 440,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_81ccec147cbe4769a84aa28fc7789b1a~mv2.png/v1/fill/w_824,h_571,al_c,lg_1,q_90,enc_avif,quality_auto/Dan%20Forsyth_PNG.png",
+    id: "dan-forsyth",
+    src: "/testimonials/gallery/dan-forsyth.png",
     alt: "Dan Forsyth testimonial",
     caption: "Dan Forsyth",
+    width: 824,
+    height: 571,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_be03e766a8c24f108a3fd2a20dfa0270~mv2.jpg/v1/fill/w_695,h_774,al_c,q_85,enc_avif,quality_auto/ANONYMOUS.jpg",
+    id: "anonymous",
+    src: "/testimonials/gallery/anonymous.jpg",
     alt: "Anonymous client testimonial",
     caption: "Anonymous feedback",
+    width: 695,
+    height: 774,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_c8a2ef3cdc04486690f70c8676781e70~mv2.jpg/v1/crop/x_189,y_0,w_911,h_565/fill/w_910,h_565,al_c,q_85,enc_avif,quality_auto/Patient%20Testimonial%20Share%20Template%20-%20Made%20with%20PosterMyWall.jpg",
+    id: "health-patient",
+    src: "/testimonials/gallery/health-patient.jpg",
     alt: "Health sector testimonial template",
     caption: "Ministry of Health — patient testimonial",
+    width: 910,
+    height: 565,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_d12496359e20490ca2eaca25f53f6300~mv2.jpg/v1/crop/x_0,y_16,w_690,h_825/fill/w_690,h_825,al_c,q_85,enc_avif,quality_auto/DCD%20References%20Learning%20Solutions_Sept2023.jpg",
+    id: "dcd-learning",
+    src: "/testimonials/gallery/dcd-learning.jpg",
     alt: "DCD references — Learning Solutions",
     caption: "DCD references — Learning Solutions",
+    width: 690,
+    height: 825,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_ec0b9efe208246dfac41019a7423a7e9~mv2.png/v1/fill/w_805,h_722,al_c,q_90,enc_avif,quality_auto/TMO.png",
+    id: "te-marae-ora",
+    src: "/testimonials/gallery/te-marae-ora.png",
     alt: "Te Marae Ora testimonial graphic",
     caption: "Te Marae Ora",
+    width: 805,
+    height: 722,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_f34269f5b4994531a7703c369af8f486~mv2.jpg/v1/fill/w_904,h_307,al_c,lg_1,q_80,enc_avif,quality_auto/Testimonial%20flyer%20template%20(1)%20-%20Made%20with%20PosterMyWall.jpg",
+    id: "training-flyer",
+    src: "/testimonials/gallery/training-flyer.jpg",
     alt: "Testimonial flyer template",
     caption: "Training testimonial flyer",
+    width: 904,
+    height: 307,
   },
 ] as const;
 
@@ -213,28 +172,38 @@ export const eLearningImages = [
     src: "/e-learning/mobile-microlearning-illustration.png",
     alt: "Illustration of a learner on a scooter with shopping bags, representing mobile-friendly microlearning.",
     caption: "Mobile-friendly microlearning",
+    width: 1200,
+    height: 800,
   },
   {
     src: "/e-learning/animation-video-illustration.png",
     alt: "Illustration of a presenter holding a jar, representing animation and video production for training.",
     caption: "Animation and video production",
+    width: 1200,
+    height: 800,
   },
   {
     src: "/e-learning/emarama-learning-platform.png",
     alt: "Illustration of a laptop displaying the eMarama learning platform in a cafe setting.",
     caption: "Interactive online learning experiences",
+    width: 1200,
+    height: 800,
   },
 ] as const;
 
 export const digitalMarketingImages = [
   {
-    src: "https://static.wixstatic.com/media/be63cf_53a6108c1c9f468eaeac483c77388f59~mv2.jpg/v1/crop/x_40,y_47,w_437,h_419/fill/w_432,h_414,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/graphic-design-icon-png-16.jpg",
+    src: "/digital-marketing/graphic-design.jpg",
     alt: "Digital marketing and design services",
     caption: "Digital marketing",
+    width: 432,
+    height: 414,
   },
   {
-    src: "https://static.wixstatic.com/media/be63cf_c3e15c4bc195470fa9b58b9a9e48ccbd~mv2.jpg/v1/crop/x_157,y_0,w_385,h_388/fill/w_450,h_440,al_c,lg_1,q_80,enc_avif,quality_auto/social%20media1.jpg",
+    src: "/digital-marketing/social-media.jpg",
     alt: "Social media marketing",
     caption: "Social media and content",
+    width: 450,
+    height: 440,
   },
 ] as const;
