@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ServicePageShell } from "@/components/ServicePageShell";
 import { edsPrimaryButtonClass } from "@/lib/eds-button";
@@ -53,7 +54,14 @@ export default function AboutPage() {
           Our team
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="flex items-center justify-center bg-white px-6 py-10 md:col-start-1 md:row-start-1">
+          <div className="flex flex-col items-center justify-center gap-4 bg-white px-6 py-10 md:col-start-1 md:row-start-1">
+            <Image
+              src="/about/james-talbot.png"
+              alt="Portrait of James Talbot"
+              width={192}
+              height={192}
+              className="h-40 w-40 rounded-full border-4 border-eds-green/20 object-cover object-top shadow-sm sm:h-48 sm:w-48"
+            />
             <p className="font-display text-2xl font-bold text-eds-green sm:text-3xl">
               James Talbot
             </p>
@@ -87,7 +95,14 @@ export default function AboutPage() {
               </li>
             </ul>
           </div>
-          <div className="flex items-center justify-center bg-white px-6 py-10 md:col-start-2 md:row-start-2">
+          <div className="flex flex-col items-center justify-center gap-4 bg-white px-6 py-10 md:col-start-2 md:row-start-2">
+            <Image
+              src="/about/mereani-talbot.png"
+              alt="Portrait of Mereani Talbot"
+              width={192}
+              height={192}
+              className="h-40 w-40 rounded-full border-4 border-eds-green/20 object-cover object-top shadow-sm sm:h-48 sm:w-48"
+            />
             <p className="font-display text-2xl font-bold text-eds-green sm:text-3xl">
               Mereani Talbot
             </p>

@@ -43,6 +43,39 @@ const testimonialGalleryAfterAirRarotonga =
     ? []
     : testimonialPageGallery.slice(primeFoodsTestimonialIndex + 1);
 
+const porterGroupLogos = [
+  {
+    src: "/testimonials/porter-group/toa-petroleum.png",
+    alt: "TOA Petroleum logo",
+    width: 740,
+    height: 516,
+  },
+  {
+    src: "/testimonials/porter-group/toa-gas.png",
+    alt: "TOA Gas logo",
+    width: 225,
+    height: 225,
+  },
+  {
+    src: "/testimonials/porter-group/ride-rarotonga.png",
+    alt: "Ride Rarotonga logo",
+    width: 416,
+    height: 416,
+  },
+  {
+    src: "/testimonials/porter-group/rarotonga-laundromat.png",
+    alt: "Rarotonga Laundromat logo",
+    width: 1024,
+    height: 464,
+  },
+  {
+    src: "/testimonials/porter-group/blue-pacific-laundry.png",
+    alt: "Blue Pacific Laundry Rarotonga logo",
+    width: 404,
+    height: 223,
+  },
+] as const;
+
 export default function ClientTestimonialsPage() {
   return (
     <ServicePageShell
@@ -79,7 +112,8 @@ export default function ClientTestimonialsPage() {
             alt="Honest Skincare logo featuring a white leaf and serif text on a green background"
             width={320}
             height={120}
-            className="h-auto w-full max-w-[280px]"
+            className="h-auto max-w-[280px] w-auto"
+            style={{ width: "auto", height: "auto" }}
           />
         </div>
         <div className="space-y-4 px-5 py-6 sm:px-8 sm:py-8">
@@ -90,7 +124,7 @@ export default function ClientTestimonialsPage() {
             id="honest-skincare-testimonial"
             className="!mt-0 font-display text-xl font-bold text-eds-charcoal"
           >
-            Honest Skincare
+            Honest Skincare International Ltd
           </h2>
           <blockquote className="space-y-4 border-l-4 border-eds-green/35 pl-4 text-eds-charcoal not-italic">
             <p>
@@ -133,6 +167,165 @@ export default function ClientTestimonialsPage() {
         </div>
       </section>
 
+      <section
+        aria-labelledby="bci-literacy-programme-testimonial"
+        className="my-10 overflow-hidden rounded-2xl border border-[#0097a7]/30 bg-white shadow-sm ring-1 ring-[#ffcc00]/20"
+      >
+        <div className="border-b border-[#0097a7]/20 bg-[linear-gradient(135deg,#e8f7f9_0%,#ffffff_55%,#fff8df_100%)] px-5 py-6 sm:px-8">
+          <Image
+            src="/testimonials/bci-logo.png"
+            alt="Bank of the Cook Islands logo with teal lettering, waves, and yellow stars"
+            width={318}
+            height={159}
+            className="h-[120px] w-auto object-contain"
+          />
+        </div>
+        <div className="space-y-4 bg-[linear-gradient(180deg,#ffffff_0%,#f4fbfc_100%)] px-5 py-6 sm:px-8 sm:py-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#0097a7]">
+            17 March 2026
+          </p>
+          <h2
+            id="bci-literacy-programme-testimonial"
+            className="!mt-0 font-display text-xl font-bold text-eds-charcoal"
+          >
+            Bank of Cook Islands
+          </h2>
+          <blockquote className="space-y-4 border-l-4 border-[#0097a7]/45 pl-4 text-eds-charcoal not-italic">
+            <p>
+              I confirm that Mereani Talbot is playing a key role in supporting
+              the Bank of Cook Islands in the design and development of our
+              national digital financial literacy programme. This includes the
+              Practical Money Skills, Practical Business Skills, and TakuEcom
+              Platform Overview e-learning courses on the BCI eMarama platform,
+              delivered in both English and Cook Islands Māori.
+            </p>
+            <p>
+              Mereani worked closely with Iana Galai, the lead e-learning
+              developer responsible for delivering three course sequences on the
+              BCI eMarama platform in both English and Cook Islands Māori.
+              Mereani served as the project lead for this initiative.
+            </p>
+            <p>
+              Although the project is still in progress, Mereani has already
+              achieved key milestones. She has demonstrated strong capability in
+              e-learning design, animation, curriculum development, project
+              management, and stakeholder coordination.
+            </p>
+            <p>
+              Her work is contributing to the development of a robust and
+              culturally relevant learning solution that integrates e-learning,
+              facilitator training, and community-based support.
+            </p>
+          </blockquote>
+          <p className="font-display text-base font-semibold text-eds-charcoal">
+            Jennifer Henry - Chief Executive Officer
+          </p>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="porter-group-testimonial"
+        className="my-10 overflow-hidden rounded-2xl border border-eds-green/30 bg-white shadow-sm ring-1 ring-eds-green/15"
+      >
+        <div className="border-b border-eds-green/20 bg-[linear-gradient(135deg,#edf8f1_0%,#ffffff_55%,#f4fbf7_100%)] px-5 py-6 sm:px-8">
+          <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-3">
+            {porterGroupLogos.map((logo) => (
+              <Image
+                key={logo.src}
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.width}
+                height={logo.height}
+                className="h-[120px] w-auto shrink-0 object-contain"
+              />
+            ))}
+          </div>
+        </div>
+        <div className="space-y-4 bg-[linear-gradient(180deg,#ffffff_0%,#f4fbf7_100%)] px-5 py-6 sm:px-8 sm:py-8">
+          <h2
+            id="porter-group-testimonial"
+            className="!mt-0 font-display text-xl font-bold text-eds-charcoal"
+          >
+            Porter Group / Apex Holdings
+          </h2>
+          <blockquote className="space-y-4 border-l-4 border-eds-green/45 pl-4 text-eds-charcoal not-italic">
+            <p>
+              I am pleased to provide this reference for James Talbot regarding
+              his consulting and management services provided to Porter Group
+              Holdings / Apex Agencies.
+            </p>
+            <p>
+              James initially joined the business in October 2024 as an
+              independent consultant following a word-of-mouth recommendation at
+              a time when the organization required stronger operational
+              controls, improved accountability, and tighter business
+              procedures.
+            </p>
+            <p>
+              During his initial consulting engagement, James quickly identified
+              operational weaknesses and implemented practical systems and
+              processes to improve structure, reporting, and day-to-day
+              operational control across the business. Due to the quality of his
+              work and leadership capability, James was asked after
+              approximately five weeks to take on the role of General Manager,
+              which he held from November 2024 through July 2025. He continues to
+              provide consulting support to the business from time to time.
+            </p>
+            <div>
+              <p>
+                Key contributions during his time with the organization
+                included:
+              </p>
+              <ul className="my-3 list-disc space-y-2 pl-5">
+                <li>
+                  Implementation of operational procedures and internal control
+                  systems.
+                </li>
+                <li>
+                  Development of organisational structures, task management
+                  systems, and accountability processes.
+                </li>
+                <li>
+                  Improvement of inventory, procurement, payroll, banking
+                  reconciliation, and reporting procedures.
+                </li>
+                <li>
+                  Introduction of stronger operational compliance and Health
+                  &amp; Safety processes.
+                </li>
+                <li>
+                  Staff leadership, mentoring, and support during a significant
+                  period of operational restructuring.
+                </li>
+                <li>
+                  Development of workflow documentation, role responsibilities,
+                  and performance management systems.
+                </li>
+              </ul>
+            </div>
+            <p>
+              James consistently demonstrated strong leadership, professionalism,
+              integrity, and a practical hands-on approach to business
+              improvement. He made a significant positive impact on the structure
+              and operational performance of the organization and was highly
+              respected by both management and staff.
+            </p>
+            <p>
+              I would have no hesitation in recommending James for senior
+              operational management, consulting, process improvement, or
+              business systems roles.
+            </p>
+            <p>
+              Should you require any further information, please feel free to
+              contact me.
+            </p>
+          </blockquote>
+          <p className="font-display text-base font-semibold text-eds-charcoal">
+            Brett Porter
+          </p>
+        </div>
+      </section>
+
       <WixImageGallery
         items={testimonialGalleryBeforeAirRarotonga}
         columns="single"
@@ -143,13 +336,14 @@ export default function ClientTestimonialsPage() {
         aria-labelledby="air-rarotonga-testimonial"
         className="my-10 overflow-hidden rounded-2xl border border-eds-charcoal/10 bg-white shadow-sm"
       >
-        <div className="border-b border-eds-charcoal/10 bg-black px-5 py-6 sm:px-8">
+        <div className="border-b border-eds-charcoal/10 bg-white px-5 py-6 sm:px-8">
           <Image
             src="/testimonials/air-rarotonga-logo.png"
             alt="Air Rarotonga logo with blue lettering and pink frangipani flowers"
-            width={279}
-            height={66}
-            className="h-auto w-full max-w-[280px]"
+            width={300}
+            height={150}
+            className="h-auto max-w-[300px] w-auto"
+            style={{ width: "auto", height: "auto" }}
           />
         </div>
         <div className="space-y-4 px-5 py-6 sm:px-8 sm:py-8">

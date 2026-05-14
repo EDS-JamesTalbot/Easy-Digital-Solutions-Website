@@ -9,7 +9,7 @@ export type WixFigure = {
 type WixImageGalleryProps = {
   items: readonly WixFigure[];
   /** default: 1 col mobile, 2 on sm+ */
-  columns?: "single" | "double";
+  columns?: "single" | "double" | "triple";
   className?: string;
 };
 
@@ -21,7 +21,14 @@ export function WixImageGallery({
   const grid =
     columns === "single"
       ? "grid gap-8"
-      : "grid gap-6 sm:grid-cols-2 sm:gap-8";
+      : columns === "triple"
+        ? "grid gap-6 md:grid-cols-3 md:gap-8"
+        : "grid gap-6 sm:grid-cols-2 sm:gap-8";
+
+  const imageSizes =
+    columns === "triple"
+      ? "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
+      : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 640px";
 
   return (
     <div
@@ -41,7 +48,7 @@ export function WixImageGallery({
               width={1200}
               height={800}
               className="h-auto max-h-[min(70vh,520px)] w-full object-contain"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 640px"
+              sizes={imageSizes}
             />
           </div>
           {img.caption ? (
