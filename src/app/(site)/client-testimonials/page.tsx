@@ -227,16 +227,20 @@ export default function ClientTestimonialsPage() {
         className="my-10 overflow-hidden rounded-2xl border border-eds-green/30 bg-white shadow-sm ring-1 ring-eds-green/15"
       >
         <div className="border-b border-eds-green/20 bg-[linear-gradient(135deg,#edf8f1_0%,#ffffff_55%,#f4fbf7_100%)] px-5 py-6 sm:px-8">
-          <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-2 sm:flex-nowrap sm:gap-3">
             {porterGroupLogos.map((logo) => (
-              <Image
+              <div
                 key={logo.src}
-                src={logo.src}
-                alt={logo.alt}
-                width={logo.width}
-                height={logo.height}
-                className="h-[120px] w-auto shrink-0 object-contain"
-              />
+                className="flex min-w-0 basis-[31%] justify-center sm:basis-auto sm:shrink-0"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.width}
+                  height={logo.height}
+                  className="h-12 w-auto max-w-full object-contain sm:h-[120px]"
+                />
+              </div>
             ))}
           </div>
         </div>
